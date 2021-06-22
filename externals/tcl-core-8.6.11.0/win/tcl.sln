@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tcl", "tcl.vcxproj", "{973B29CD-37DB-442C-85F8-5A17502143F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Static|x86 = Debug Static|x86
+		Debug|x86 = Debug|x86
+		Release Static|x86 = Release Static|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{973B29CD-37DB-442C-85F8-5A17502143F5}.Debug Static|x86.ActiveCfg = Debug Static|Win32
+		{973B29CD-37DB-442C-85F8-5A17502143F5}.Debug Static|x86.Build.0 = Debug Static|Win32
+		{973B29CD-37DB-442C-85F8-5A17502143F5}.Debug|x86.ActiveCfg = Debug|Win32
+		{973B29CD-37DB-442C-85F8-5A17502143F5}.Debug|x86.Build.0 = Debug|Win32
+		{973B29CD-37DB-442C-85F8-5A17502143F5}.Release Static|x86.ActiveCfg = Release Static|Win32
+		{973B29CD-37DB-442C-85F8-5A17502143F5}.Release Static|x86.Build.0 = Release Static|Win32
+		{973B29CD-37DB-442C-85F8-5A17502143F5}.Release|x86.ActiveCfg = Release|Win32
+		{973B29CD-37DB-442C-85F8-5A17502143F5}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A47D2AEB-6FCE-4C14-A8A0-BCC34D974E67}
+	EndGlobalSection
+EndGlobal

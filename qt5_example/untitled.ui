@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dialogo_uno</class>
+ <widget class="QDialog" name="dialogo_uno">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>416</width>
+    <height>423</height>
+   </rect>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::TabFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Primer Programa...</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../Users/Jose/Pictures/chat_16.png</normaloff>../../Users/Jose/Pictures/chat_16.png</iconset>
+  </property>
+  <property name="toolTip">
+   <string>Primer programa...</string>
+  </property>
+  <property name="statusTip">
+   <string>Primer programa...</string>
+  </property>
+  <property name="whatsThis">
+   <string>Primer programa....</string>
+  </property>
+  <property name="accessibleName">
+   <string>primer_programa</string>
+  </property>
+  <property name="accessibleDescription">
+   <string>primer_programa</string>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <widget class="QPushButton" name="boton_uno">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>310</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>Boton Uno</string>
+   </property>
+   <property name="statusTip">
+    <string>Boton Uno</string>
+   </property>
+   <property name="whatsThis">
+    <string>boton_uno</string>
+   </property>
+   <property name="accessibleName">
+    <string>boton_uno</string>
+   </property>
+   <property name="accessibleDescription">
+    <string>boton_uno</string>
+   </property>
+   <property name="text">
+    <string>Haz Click!</string>
+   </property>
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="autoDefault">
+    <bool>false</bool>
+   </property>
+   <property name="default">
+    <bool>true</bool>
+   </property>
+   <property name="flat">
+    <bool>true</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>boton_uno</sender>
+   <signal>released()</signal>
+   <receiver>dialogo_uno</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>247</x>
+     <y>321</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>207</x>
+     <y>211</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

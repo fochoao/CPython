@@ -1,0 +1,11 @@
+﻿  _bz2module.c
+  blocksort.c
+  bzlib.c
+  compress.c
+  crctable.c
+  decompress.c
+  huffman.c
+  randtable.c
+  Generating Code...
+     Creating library C:\cpython\PCbuild\amd64\_bz2_d.lib and object C:\cpython\PCbuild\amd64\_bz2_d.exp
+  _bz2.vcxproj -> C:\cpython\PCbuild\amd64\_bz2_d.pyd

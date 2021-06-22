@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug Static|Win32">
+      <Configuration>Debug Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release Static|Win32">
+      <Configuration>Release Static</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MakeFileProj</Keyword>
+    <ProjectGuid>{973B29CD-37DB-442C-85F8-5A17502143F5}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CLRSupport>true</CLRSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\tcl_Dynamic\</IntDir>
+    <NMakeBuildCommandLine>nmake -nologo -f makefile.vc OPTS=threads,symbols MSVCDIR=IDE</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake -nologo -f makefile.vc OPTS=threads,symbols MSVCDIR=IDE clean release</NMakeReBuildCommandLine>
+    <NMakeOutput>Debug\tclsh86tg.exe</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\tcl_Dynamic\</IntDir>
+    <NMakeBuildCommandLine>nmake -nologo -f makefile.vc OPTS=threads MSVCDIR=IDE</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake -nologo -f makefile.vc OPTS=threads MSVCDIR=IDE clean release</NMakeReBuildCommandLine>
+    <NMakeOutput>Release\tclsh86t.exe</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release Static|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\tcl_Static\</IntDir>
+    <NMakeBuildCommandLine>nmake -nologo -f makefile.vc OPTS=static MSVCDIR=IDE</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake -nologo -f makefile.vc OPTS=static MSVCDIR=IDE -a</NMakeReBuildCommandLine>
+    <NMakeOutput>Release\tclsh86s.exe</NMakeOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug Static|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\tcl_Static\</IntDir>
+    <NMakeBuildCommandLine>nmake -nologo -f makefile.vc OPTS=symbols,static MSVCDIR=IDE</NMakeBuildCommandLine>
+    <NMakeReBuildCommandLine>nmake -nologo -f makefile.vc OPTS=symbols,static MSVCDIR=IDE -a</NMakeReBuildCommandLine>
+    <NMakeOutput>Debug\tclsh86sg.exe</NMakeOutput>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\compat\dirent.h" />
+    <ClInclude Include="..\compat\dirent2.h" />
+    <ClInclude Include="..\compat\dlfcn.h" />
+    <ClInclude Include="..\compat\float.h" />
+    <ClInclude Include="..\compat\limits.h" />
+    <ClInclude Include="..\compat\stdlib.h" />
+    <ClInclude Include="..\compat\string.h" />
+    <ClInclude Include="..\compat\tclErrno.h" />
+    <ClInclude Include="..\compat\unistd.h" />
+    <ClInclude Include="..\generic\regcustom.h" />
+    <ClInclude Include="..\generic\regerrs.h" />
+    <ClInclude Include="..\generic\regex.h" />
+    <ClInclude Include="..\generic\regguts.h" />
+    <ClInclude Include="..\generic\tcl.h" />
+    <ClInclude Include="..\generic\tclCompile.h" />
+    <ClInclude Include="..\generic\tclDecls.h" />
+    <ClInclude Include="..\generic\tclInt.h" />
+    <ClInclude Include="..\generic\tclIntDecls.h" />
+    <ClInclude Include="..\generic\tclIntPlatDecls.h" />
+    <ClInclude Include="..\generic\tclIO.h" />
+    <ClInclude Include="..\generic\tclPlatDecls.h" />
+    <ClInclude Include="..\generic\tclPort.h" />
+    <ClInclude Include="..\generic\tclRegexp.h" />
+    <ClInclude Include="tclWinInt.h" />
+    <ClInclude Include="tclWinPort.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\compat\fixstrtod.c" />
+    <ClCompile Include="..\compat\gettod.c" />
+    <ClCompile Include="..\compat\memcmp.c" />
+    <ClCompile Include="..\compat\opendir.c" />
+    <ClCompile Include="..\compat\strncasecmp.c" />
+    <ClCompile Include="..\compat\strstr.c" />
+    <ClCompile Include="..\compat\strtod.c" />
+    <ClCompile Include="..\compat\strtol.c" />
+    <ClCompile Include="..\compat\strtoul.c" />
+    <ClCompile Include="..\compat\waitpid.c" />
+    <ClCompile Include="..\generic\regcomp.c" />
+    <ClCompile Include="..\generic\regc_color.c" />
+    <ClCompile Include="..\generic\regc_cvec.c" />
+    <ClCompile Include="..\generic\regc_lex.c" />
+    <ClCompile Include="..\generic\regc_locale.c" />
+    <ClCompile Include="..\generic\regc_nfa.c" />
+    <ClCompile Include="..\generic\regerror.c" />
+    <ClCompile Include="..\generic\regexec.c" />
+    <ClCompile Include="..\generic\rege_dfa.c" />
+    <ClCompile Include="..\generic\regfree.c" />
+    <ClCompile Include="..\generic\regfronts.c" />
+    <ClCompile Include="..\generic\tclAlloc.c" />
+    <ClCompile Include="..\generic\tclAsync.c" />
+    <ClCompile Include="..\generic\tclBasic.c" />
+    <ClCompile Include="..\generic\tclBinary.c" />
+    <ClCompile Include="..\generic\tclCkalloc.c" />
+    <ClCompile Include="..\generic\tclClock.c" />
+    <ClCompile Include="..\generic\tclCmdAH.c" />
+    <ClCompile Include="..\generic\tclCmdIL.c" />
+    <ClCompile Include="..\generic\tclCmdMZ.c" />
+    <ClCompile Include="..\generic\tclCompCmds.c" />
+    <ClCompile Include="..\generic\tclCompExpr.c" />
+    <ClCompile Include="..\generic\tclCompile.c" />
+    <ClCompile Include="..\generic\tclDate.c" />
+    <ClCompile Include="..\generic\tclEncoding.c" />
+    <ClCompile Include="..\generic\tclEnv.c" />
+    <ClCompile Include="..\generic\tclEvent.c" />
+    <ClCompile Include="..\generic\tclExecute.c" />
+    <ClCompile Include="..\generic\tclFCmd.c" />
+    <ClCompile Include="..\generic\tclFileName.c" />
+    <ClCompile Include="..\generic\tclGet.c" />
+    <ClCompile Include="..\generic\tclHash.c" />
+    <ClCompile Include="..\generic\tclHistory.c" />
+    <ClCompile Include="..\generic\tclIndexObj.c" />
+    <ClCompile Include="..\generic\tclInterp.c" />
+    <ClCompile Include="..\generic\tclIO.c" />
+    <ClCompile Include="..\generic\tclIOCmd.c" />
+    <ClCompile Include="..\generic\tclIOGT.c" />
+    <ClCompile Include="..\generic\tclIOSock.c" />
+    <ClCompile Include="..\generic\tclIOUtil.c" />
+    <ClCompile Include="..\generic\tclLink.c" />
+    <ClCompile Include="..\generic\tclListObj.c" />
+    <ClCompile Include="..\generic\tclLiteral.c" />
+    <ClCompile Include="..\generic\tclLoad.c" />
+    <ClCompile Include="..\generic\tclLoadNone.c" />
+    <ClCompile Include="..\generic\tclMain.c" />
+    <ClCompile Include="..\generic\tclNamesp.c" />
+    <ClCompile Include="..\generic\tclNotify.c" />
+    <ClCompile Include="..\generic\tclObj.c" />
+    <ClCompile Include="..\generic\tclOOStubLib.c" />
+    <ClCompile Include="..\generic\tclPanic.c" />
+    <ClCompile Include="..\generic\tclParse.c" />
+    <ClCompile Include="..\generic\tclPipe.c" />
+    <ClCompile Include="..\generic\tclPkg.c" />
+    <ClCompile Include="..\generic\tclPosixStr.c" />
+    <ClCompile Include="..\generic\tclPreserve.c" />
+    <ClCompile Include="..\generic\tclProc.c" />
+    <ClCompile Include="..\generic\tclRegexp.c" />
+    <ClCompile Include="..\generic\tclResolve.c" />
+    <ClCompile Include="..\generic\tclResult.c" />
+    <ClCompile Include="..\generic\tclScan.c" />
+    <ClCompile Include="..\generic\tclStringObj.c" />
+    <ClCompile Include="..\generic\tclStubInit.c" />
+    <ClCompile Include="..\generic\tclStubLib.c" />
+    <ClCompile Include="..\generic\tclTest.c" />
+    <ClCompile Include="..\generic\tclTestObj.c" />
+    <ClCompile Include="..\generic\tclTestProcBodyObj.c" />
+    <ClCompile Include="..\generic\tclThread.c" />
+    <ClCompile Include="..\generic\tclThreadJoin.c" />
+    <ClCompile Include="..\generic\tclThreadTest.c" />
+    <ClCompile Include="..\generic\tclTimer.c" />
+    <ClCompile Include="..\generic\tclTomMathStubLib.c" />
+    <ClCompile Include="..\generic\tclUniData.c" />
+    <ClCompile Include="..\generic\tclUtf.c" />
+    <ClCompile Include="..\generic\tclUtil.c" />
+    <ClCompile Include="..\generic\tclVar.c" />
+    <ClCompile Include="cat.c" />
+    <ClCompile Include="tclAppInit.c" />
+    <ClCompile Include="tclWin32Dll.c" />
+    <ClCompile Include="tclWinChan.c" />
+    <ClCompile Include="tclWinConsole.c" />
+    <ClCompile Include="tclWinDde.c" />
+    <ClCompile Include="tclWinError.c" />
+    <ClCompile Include="tclWinFCmd.c" />
+    <ClCompile Include="tclWinFile.c" />
+    <ClCompile Include="tclWinInit.c" />
+    <ClCompile Include="tclWinLoad.c" />
+    <ClCompile Include="tclWinNotify.c" />
+    <ClCompile Include="tclWinPipe.c" />
+    <ClCompile Include="tclWinReg.c" />
+    <ClCompile Include="tclWinSerial.c" />
+    <ClCompile Include="tclWinSock.c" />
+    <ClCompile Include="tclWinTest.c" />
+    <ClCompile Include="tclWinThrd.c" />
+    <ClCompile Include="tclWinTime.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\compat\README" />
+    <CustomBuild Include="..\doc\Access.3" />
+    <CustomBuild Include="..\doc\AddErrInfo.3" />
+    <CustomBuild Include="..\doc\after.n" />
+    <CustomBuild Include="..\doc\Alloc.3" />
+    <CustomBuild Include="..\doc\AllowExc.3" />
+    <CustomBuild Include="..\doc\append.n" />
+    <CustomBuild Include="..\doc\AppInit.3" />
+    <CustomBuild Include="..\doc\array.n" />
+    <CustomBuild Include="..\doc\AssocData.3" />
+    <CustomBuild Include="..\doc\Async.3" />
+    <CustomBuild Include="..\doc\BackgdErr.3" />
+    <CustomBuild Include="..\doc\Backslash.3" />
+    <CustomBuild Include="..\doc\bgerror.n" />
+    <CustomBuild Include="..\doc\binary.n" />
+    <CustomBuild Include="..\doc\BoolObj.3" />
+    <CustomBuild Include="..\doc\break.n" />
+    <CustomBuild Include="..\doc\ByteArrObj.3" />
+    <CustomBuild Include="..\doc\CallDel.3" />
+    <CustomBuild Include="..\doc\case.n" />
+    <CustomBuild Include="..\doc\catch.n" />
+    <CustomBuild Include="..\doc\cd.n" />
+    <CustomBuild Include="..\doc\ChnlStack.3" />
+    <CustomBuild Include="..\doc\clock.n" />
+    <CustomBuild Include="..\doc\close.n" />
+    <CustomBuild Include="..\doc\CmdCmplt.3" />
+    <CustomBuild Include="..\doc\Concat.3" />
+    <CustomBuild Include="..\doc\concat.n" />
+    <CustomBuild Include="..\doc\continue.n" />
+    <CustomBuild Include="..\doc\CrtAlias.3" />
+    <CustomBuild Include="..\doc\CrtChannel.3" />
+    <CustomBuild Include="..\doc\CrtChnlHdlr.3" />
+    <CustomBuild Include="..\doc\CrtCloseHdlr.3" />
+    <CustomBuild Include="..\doc\CrtCommand.3" />
+    <CustomBuild Include="..\doc\CrtFileHdlr.3" />
+    <CustomBuild Include="..\doc\CrtInterp.3" />
+    <CustomBuild Include="..\doc\CrtMathFnc.3" />
+    <CustomBuild Include="..\doc\CrtObjCmd.3" />
+    <CustomBuild Include="..\doc\CrtTimerHdlr.3" />
+    <CustomBuild Include="..\doc\CrtTrace.3" />
+    <CustomBuild Include="..\doc\dde.n" />
+    <CustomBuild Include="..\doc\DetachPids.3" />
+    <CustomBuild Include="..\doc\DoOneEvent.3" />
+    <CustomBuild Include="..\doc\DoubleObj.3" />
+    <CustomBuild Include="..\doc\DoWhenIdle.3" />
+    <CustomBuild Include="..\doc\DString.3" />
+    <CustomBuild Include="..\doc\DumpActiveMemory.3" />
+    <CustomBuild Include="..\doc\Encoding.3" />
+    <CustomBuild Include="..\doc\encoding.n" />
+    <CustomBuild Include="..\doc\Environment.3" />
+    <CustomBuild Include="..\doc\eof.n" />
+    <CustomBuild Include="..\doc\error.n" />
+    <CustomBuild Include="..\doc\Eval.3" />
+    <CustomBuild Include="..\doc\eval.n" />
+    <CustomBuild Include="..\doc\exec.n" />
+    <CustomBuild Include="..\doc\Exit.3" />
+    <CustomBuild Include="..\doc\exit.n" />
+    <CustomBuild Include="..\doc\expr.n" />
+    <CustomBuild Include="..\doc\ExprLong.3" />
+    <CustomBuild Include="..\doc\ExprLongObj.3" />
+    <CustomBuild Include="..\doc\fblocked.n" />
+    <CustomBuild Include="..\doc\fconfigure.n" />
+    <CustomBuild Include="..\doc\fcopy.n" />
+    <CustomBuild Include="..\doc\file.n" />
+    <CustomBuild Include="..\doc\fileevent.n" />
+    <CustomBuild Include="..\doc\filename.n" />
+    <CustomBuild Include="..\doc\FileSystem.3" />
+    <CustomBuild Include="..\doc\FindExec.3" />
+    <CustomBuild Include="..\doc\flush.n" />
+    <CustomBuild Include="..\doc\for.n" />
+    <CustomBuild Include="..\doc\foreach.n" />
+    <CustomBuild Include="..\doc\format.n" />
+    <CustomBuild Include="..\doc\GetCwd.3" />
+    <CustomBuild Include="..\doc\GetHostName.3" />
+    <CustomBuild Include="..\doc\GetIndex.3" />
+    <CustomBuild Include="..\doc\GetInt.3" />
+    <CustomBuild Include="..\doc\GetOpnFl.3" />
+    <CustomBuild Include="..\doc\gets.n" />
+    <CustomBuild Include="..\doc\GetStdChan.3" />
+    <CustomBuild Include="..\doc\GetVersion.3" />
+    <CustomBuild Include="..\doc\glob.n" />
+    <CustomBuild Include="..\doc\global.n" />
+    <CustomBuild Include="..\doc\Hash.3" />
+    <CustomBuild Include="..\doc\history.n" />
+    <CustomBuild Include="..\doc\http.n" />
+    <CustomBuild Include="..\doc\if.n" />
+    <CustomBuild Include="..\doc\incr.n" />
+    <CustomBuild Include="..\doc\info.n" />
+    <CustomBuild Include="..\doc\Init.3" />
+    <CustomBuild Include="..\doc\InitStubs.3" />
+    <CustomBuild Include="..\doc\Interp.3" />
+    <CustomBuild Include="..\doc\interp.n" />
+    <CustomBuild Include="..\doc\IntObj.3" />
+    <CustomBuild Include="..\doc\join.n" />
+    <CustomBuild Include="..\doc\lappend.n" />
+    <CustomBuild Include="..\doc\library.n" />
+    <CustomBuild Include="..\doc\lindex.n" />
+    <CustomBuild Include="..\doc\LinkVar.3" />
+    <CustomBuild Include="..\doc\linsert.n" />
+    <CustomBuild Include="..\doc\list.n" />
+    <CustomBuild Include="..\doc\ListObj.3" />
+    <CustomBuild Include="..\doc\llength.n" />
+    <CustomBuild Include="..\doc\load.n" />
+    <CustomBuild Include="..\doc\lrange.n" />
+    <CustomBuild Include="..\doc\lreplace.n" />
+    <CustomBuild Include="..\doc\lsearch.n" />
+    <CustomBuild Include="..\doc\lsort.n" />
+    <CustomBuild Include="..\doc\man.macros" />
+    <CustomBuild Include="..\doc\memory.n" />
+    <CustomBuild Include="..\doc\msgcat.n" />
+    <CustomBuild Include="..\doc\namespace.n" />
+    <CustomBuild Include="..\doc\Notifier.3" />
+    <CustomBuild Include="..\doc\Object.3" />
+    <CustomBuild Include="..\doc\ObjectType.3" />
+    <CustomBuild Include="..\doc\open.n" />
+    <CustomBuild Include="..\doc\OpenFileChnl.3" />
+    <CustomBuild Include="..\doc\OpenTcp.3" />
+    <CustomBuild Include="..\doc\package.n" />
+    <CustomBuild Include="..\doc\packagens.n" />
+    <CustomBuild Include="..\doc\Panic.3" />
+    <CustomBuild Include="..\doc\ParseCmd.3" />
+    <CustomBuild Include="..\doc\pid.n" />
+    <CustomBuild Include="..\doc\pkgMkIndex.n" />
+    <CustomBuild Include="..\doc\PkgRequire.3" />
+    <CustomBuild Include="..\doc\Preserve.3" />
+    <CustomBuild Include="..\doc\PrintDbl.3" />
+    <CustomBuild Include="..\doc\proc.n" />
+    <CustomBuild Include="..\doc\puts.n" />
+    <CustomBuild Include="..\doc\pwd.n" />
+    <CustomBuild Include="..\doc\read.n" />
+    <CustomBuild Include="..\doc\RecEvalObj.3" />
+    <CustomBuild Include="..\doc\RecordEval.3" />
+    <CustomBuild Include="..\doc\RegExp.3" />
+    <CustomBuild Include="..\doc\regexp.n" />
+    <CustomBuild Include="..\doc\registry.n" />
+    <CustomBuild Include="..\doc\regsub.n" />
+    <CustomBuild Include="..\doc\rename.n" />
+    <CustomBuild Include="..\doc\return.n" />
+    <CustomBuild Include="..\doc\re_syntax.n" />
+    <CustomBuild Include="..\doc\safe.n" />
+    <CustomBuild Include="..\doc\SaveResult.3" />
+    <CustomBuild Include="..\doc\scan.n" />
+    <CustomBuild Include="..\doc\seek.n" />
+    <CustomBuild Include="..\doc\set.n" />
+    <CustomBuild Include="..\doc\SetErrno.3" />
+    <CustomBuild Include="..\doc\SetRecLmt.3" />
+    <CustomBuild Include="..\doc\SetResult.3" />
+    <CustomBuild Include="..\doc\SetVar.3" />
+    <CustomBuild Include="..\doc\Signal.3" />
+    <CustomBuild Include="..\doc\Sleep.3" />
+    <CustomBuild Include="..\doc\socket.n" />
+    <CustomBuild Include="..\doc\source.n" />
+    <CustomBuild Include="..\doc\SourceRCFile.3" />
+    <CustomBuild Include="..\doc\split.n" />
+    <CustomBuild Include="..\doc\SplitList.3" />
+    <CustomBuild Include="..\doc\SplitPath.3" />
+    <CustomBuild Include="..\doc\StaticPkg.3" />
+    <CustomBuild Include="..\doc\StdChannels.3" />
+    <CustomBuild Include="..\doc\string.n" />
+    <CustomBuild Include="..\doc\StringObj.3" />
+    <CustomBuild Include="..\doc\StrMatch.3" />
+    <CustomBuild Include="..\doc\subst.n" />
+    <CustomBuild Include="..\doc\SubstObj.3" />
+    <CustomBuild Include="..\doc\switch.n" />
+    <CustomBuild Include="..\doc\Tcl.n" />
+    <CustomBuild Include="..\doc\tclsh.1" />
+    <CustomBuild Include="..\doc\tcltest.n" />
+    <CustomBuild Include="..\doc\tclvars.n" />
+    <CustomBuild Include="..\doc\Tcl_Main.3" />
+    <CustomBuild Include="..\doc\TCL_MEM_DEBUG.3" />
+    <CustomBuild Include="..\doc\tell.n" />
+    <CustomBuild Include="..\doc\Thread.3" />
+    <CustomBuild Include="..\doc\time.n" />
+    <CustomBuild Include="..\doc\ToUpper.3" />
+    <CustomBuild Include="..\doc\trace.n" />
+    <CustomBuild Include="..\doc\TraceVar.3" />
+    <CustomBuild Include="..\doc\Translate.3" />
+    <CustomBuild Include="..\doc\UniCharIsAlpha.3" />
+    <CustomBuild Include="..\doc\unknown.n" />
+    <CustomBuild Include="..\doc\unset.n" />
+    <CustomBuild Include="..\doc\update.n" />
+    <CustomBuild Include="..\doc\uplevel.n" />
+    <CustomBuild Include="..\doc\UpVar.3" />
+    <CustomBuild Include="..\doc\upvar.n" />
+    <CustomBuild Include="..\doc\Utf.3" />
+    <CustomBuild Include="..\doc\variable.n" />
+    <CustomBuild Include="..\doc\vwait.n" />
+    <CustomBuild Include="..\doc\while.n" />
+    <CustomBuild Include="..\doc\WrongNumArgs.3" />
+    <CustomBuild Include="..\generic\README" />
+    <CustomBuild Include="..\generic\tcl.decls" />
+    <CustomBuild Include="..\generic\tclGetDate.y" />
+    <CustomBuild Include="..\generic\tclInt.decls" />
+    <CustomBuild Include="..\library\auto.tcl" />
+    <CustomBuild Include="..\library\history.tcl" />
+    <CustomBuild Include="..\library\init.tcl" />
+    <CustomBuild Include="..\library\ldAout.tcl" />
+    <CustomBuild Include="..\library\package.tcl" />
+    <CustomBuild Include="..\library\parray.tcl" />
+    <CustomBuild Include="..\library\safe.tcl" />
+    <CustomBuild Include="..\library\tclIndex" />
+    <CustomBuild Include="..\library\word.tcl" />
+    <CustomBuild Include="aclocal.m4" />
+    <CustomBuild Include="configure" />
+    <CustomBuild Include="configure.in" />
+    <CustomBuild Include="Makefile.in" />
+    <CustomBuild Include="makefile.vc" />
+    <CustomBuild Include="mkd.bat" />
+    <CustomBuild Include="README" />
+    <CustomBuild Include="README.binary" />
+    <CustomBuild Include="rmd.bat" />
+    <CustomBuild Include="rules.vc" />
+    <CustomBuild Include="tcl.hpj.in" />
+    <CustomBuild Include="tcl.m4" />
+    <CustomBuild Include="tclConfig.sh.in" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tcl.rc" />
+    <ResourceCompile Include="tclsh.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="tclsh.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

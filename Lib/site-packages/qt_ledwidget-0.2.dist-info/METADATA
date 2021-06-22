@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: qt-ledwidget
+Version: 0.2
+Summary: PyQt5 widget with animated LEDs
+Home-page: https://github.com/tappi287/qt_ledwidget
+Author: Stefan Tapper
+Author-email: tapper.stefan@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: PyQt5
+
+UNKNOWN
+
+

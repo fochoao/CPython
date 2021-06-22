@@ -1,0 +1,1086 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="compat">
+      <UniqueIdentifier>{83552694-a638-4261-a309-88553a9aaeda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="doc">
+      <UniqueIdentifier>{29337869-7bbd-49bc-a957-03829ddf4e78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generic">
+      <UniqueIdentifier>{56e8b49a-ceb5-468a-ad12-53bb9e49dcdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="library">
+      <UniqueIdentifier>{b4903609-ef56-40a8-96e3-2b3c1e91b7ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="win">
+      <UniqueIdentifier>{0ee3b9b2-9481-4900-af90-5aa669ee1aaf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mac">
+      <UniqueIdentifier>{240f7363-60fa-419a-aa4c-746f2538ceb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{64b05d2a-d154-4803-a3e0-1034bb601983}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tools">
+      <UniqueIdentifier>{4fde434f-5bed-4252-89f9-33d4b991ceb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="unix">
+      <UniqueIdentifier>{27e56bdd-ff2a-440e-ab1b-b9e0352a5767}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\compat\dirent.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\compat\dirent2.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\compat\dlfcn.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\compat\float.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\compat\limits.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\compat\stdlib.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\compat\string.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\compat\tclErrno.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\compat\unistd.h">
+      <Filter>compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\regcustom.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\regerrs.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\regex.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\regguts.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\tcl.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\tclCompile.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\tclDecls.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\tclInt.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\tclIntDecls.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\tclIntPlatDecls.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\tclIO.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\tclPlatDecls.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\tclPort.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\generic\tclRegexp.h">
+      <Filter>generic</Filter>
+    </ClInclude>
+    <ClInclude Include="tclWinInt.h">
+      <Filter>win</Filter>
+    </ClInclude>
+    <ClInclude Include="tclWinPort.h">
+      <Filter>win</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\compat\fixstrtod.c">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\compat\gettod.c">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\compat\memcmp.c">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\compat\opendir.c">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\compat\strncasecmp.c">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\compat\strstr.c">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\compat\strtod.c">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\compat\strtol.c">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\compat\strtoul.c">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\compat\waitpid.c">
+      <Filter>compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\regc_color.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\regc_cvec.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\regc_lex.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\regc_locale.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\regc_nfa.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\regcomp.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\rege_dfa.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\regerror.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\regexec.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\regfree.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\regfronts.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclAlloc.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclAsync.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclBasic.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclBinary.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclCkalloc.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclClock.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclCmdAH.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclCmdIL.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclCmdMZ.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclCompCmds.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclCompExpr.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclCompile.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclDate.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclEncoding.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclEnv.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclEvent.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclExecute.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclFCmd.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclFileName.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclGet.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclHash.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclHistory.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclIndexObj.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclInterp.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclIO.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclIOCmd.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclIOGT.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclIOSock.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclIOUtil.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclLink.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclListObj.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclLiteral.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclLoad.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclLoadNone.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclMain.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclNamesp.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclNotify.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclObj.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclPanic.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclParse.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclPipe.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclPkg.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclPosixStr.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclPreserve.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclProc.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclRegexp.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclResolve.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclResult.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclScan.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclStringObj.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclStubInit.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclStubLib.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclOOStubLib.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclTomMathStubLib.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclTest.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclTestObj.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclTestProcBodyObj.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclThread.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclThreadJoin.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclThreadTest.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclTimer.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclUniData.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclUtf.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclUtil.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\generic\tclVar.c">
+      <Filter>generic</Filter>
+    </ClCompile>
+    <ClCompile Include="cat.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclAppInit.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWin32Dll.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinChan.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinConsole.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinDde.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinError.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinFCmd.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinFile.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinInit.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinLoad.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinNotify.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinPipe.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinReg.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinSerial.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinSock.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinTest.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinThrd.c">
+      <Filter>win</Filter>
+    </ClCompile>
+    <ClCompile Include="tclWinTime.c">
+      <Filter>win</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="tcl.rc">
+      <Filter>win</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="tclsh.rc">
+      <Filter>win</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="tclsh.ico">
+      <Filter>win</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\compat\README">
+      <Filter>compat</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Access.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\AddErrInfo.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\after.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Alloc.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\AllowExc.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\append.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\AppInit.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\array.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\AssocData.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Async.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\BackgdErr.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Backslash.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\bgerror.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\binary.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\BoolObj.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\break.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\ByteArrObj.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CallDel.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\case.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\catch.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\cd.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\ChnlStack.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\clock.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\close.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CmdCmplt.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Concat.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\concat.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\continue.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtChannel.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtChnlHdlr.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtCloseHdlr.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtCommand.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtFileHdlr.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtInterp.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtMathFnc.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtObjCmd.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtAlias.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtTimerHdlr.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\CrtTrace.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\dde.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\DetachPids.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\DoOneEvent.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\DoubleObj.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\DoWhenIdle.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\DString.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\DumpActiveMemory.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Encoding.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\encoding.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Environment.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\eof.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\error.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Eval.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\eval.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\exec.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Exit.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\exit.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\expr.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\ExprLong.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\ExprLongObj.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\fblocked.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\fconfigure.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\fcopy.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\file.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\fileevent.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\filename.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\FileSystem.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\FindExec.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\flush.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\for.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\foreach.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\format.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\GetCwd.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\GetHostName.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\GetIndex.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\GetInt.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\GetOpnFl.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\gets.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\GetStdChan.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\GetVersion.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\glob.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\global.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Hash.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\history.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\http.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\if.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\incr.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\info.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Init.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\InitStubs.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Interp.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\interp.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\IntObj.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\join.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\lappend.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\library.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\lindex.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\LinkVar.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\linsert.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\list.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\ListObj.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\llength.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\load.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\lrange.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\lreplace.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\lsearch.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\lsort.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\man.macros">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\memory.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\msgcat.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\namespace.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Notifier.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Object.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\ObjectType.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\open.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\OpenFileChnl.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\OpenTcp.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\package.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\packagens.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Panic.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\ParseCmd.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\pid.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\pkgMkIndex.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\PkgRequire.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Preserve.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\PrintDbl.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\proc.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\puts.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\pwd.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\re_syntax.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\read.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\RecEvalObj.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\RecordEval.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\RegExp.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\regexp.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\registry.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\regsub.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\rename.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\return.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\safe.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\SaveResult.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\scan.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\seek.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\set.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\SetErrno.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\SetRecLmt.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\SetResult.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\SetVar.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Signal.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Sleep.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\socket.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\source.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\SourceRCFile.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\split.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\SplitList.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\SplitPath.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\StaticPkg.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\StdChannels.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\string.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\StringObj.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\StrMatch.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\subst.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\SubstObj.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\switch.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Tcl.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Tcl_Main.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\TCL_MEM_DEBUG.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\tclsh.1">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\tcltest.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\tclvars.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\tell.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Thread.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\time.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\ToUpper.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\trace.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\TraceVar.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Translate.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\UniCharIsAlpha.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\unknown.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\unset.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\update.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\uplevel.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\UpVar.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\upvar.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\Utf.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\variable.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\vwait.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\while.n">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\doc\WrongNumArgs.3">
+      <Filter>doc</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\generic\README">
+      <Filter>generic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\generic\tcl.decls">
+      <Filter>generic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\generic\tclGetDate.y">
+      <Filter>generic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\generic\tclInt.decls">
+      <Filter>generic</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\library\auto.tcl">
+      <Filter>library</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\library\history.tcl">
+      <Filter>library</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\library\init.tcl">
+      <Filter>library</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\library\ldAout.tcl">
+      <Filter>library</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\library\package.tcl">
+      <Filter>library</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\library\parray.tcl">
+      <Filter>library</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\library\safe.tcl">
+      <Filter>library</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\library\tclIndex">
+      <Filter>library</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\library\word.tcl">
+      <Filter>library</Filter>
+    </CustomBuild>
+    <CustomBuild Include="aclocal.m4">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="configure">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="configure.in">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Makefile.in">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="makefile.vc">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mkd.bat">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="README">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="README.binary">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rmd.bat">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="rules.vc">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tcl.hpj.in">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tcl.m4">
+      <Filter>win</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tclConfig.sh.in">
+      <Filter>win</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
