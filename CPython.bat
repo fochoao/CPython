@@ -4,7 +4,7 @@
 @rem rebuild.
 @rem This is only meant as a convenience for developing CPython
 @rem and using it outside of that context is ill-advised.
-@echo CPython 3.10.0 beta 2. Compiled by Fernando Ochoa O. On day Jun  2 2021. At hour 10:18:25. fochoao(at)pm.me
+@echo CPython 3.10.0 beta 2. Compiled by Fernando Ochoa O. On day Jun 23 2021, at hour 02:30:14 AM. fochoao(at)pm.me
 @setlocal
 @set PYTHONHOME=C:\cpython\
 
