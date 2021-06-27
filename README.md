@@ -4,7 +4,7 @@
         <img
             alt="PHP Logo"
             title="PHP Logo"
-            src="https://www.python.org/static/img/python-logo.pngg"
+            src="https://www.python.org/static/img/python-logo.png"
             width="1920">
 </div>
 
