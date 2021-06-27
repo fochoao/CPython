@@ -2,7 +2,8 @@
       <img
          alt="Python"
          title="Python"
-         src="https://www.python.org/static/img/python-logo.png" >
+         src="https://www.python.org/static/img/python-logo.png"
+         width="300" />
 </div>
 
 This is Python version 3.10.0 beta 3
