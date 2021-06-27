@@ -30,22 +30,22 @@ MODLIBS=           $(LOCALMODLIBS) $(BASEMODLIBS)
 VERSION=	3.10
 srcdir=		.
 
-abs_srcdir=	/mnt/c/cpython
-abs_builddir=	/mnt/c/cpython
+abs_srcdir=	/c/cpython
+abs_builddir=	/c/cpython
 
 
-CC=		gcc -pthread
+CC=		gcc
 CXX=		g++
 MAINCC=		$(CC)
 LINKCC=		$(PURIFY) $(MAINCC)
 AR=		ar
 READELF=	readelf
-SOABI=		cpython-310-x86_64-linux-gnu
+SOABI=		cpython-310
 LDVERSION=	$(VERSION)$(ABIFLAGS)
 LIBPYTHON=	
-GITVERSION=	
-GITTAG=		
-GITBRANCH=	
+GITVERSION=	git --git-dir $(srcdir)/.git rev-parse --short HEAD
+GITTAG=		git --git-dir $(srcdir)/.git describe --all --always --dirty
+GITBRANCH=	git --git-dir $(srcdir)/.git name-rev --name-only HEAD
 PGO_PROF_GEN_FLAG=-fprofile-generate
 PGO_PROF_USE_FLAG=-fprofile-use -fprofile-correction
 LLVM_PROF_MERGER=true
@@ -105,10 +105,10 @@ PY_LDFLAGS=	$(CONFIGURE_LDFLAGS) $(LDFLAGS)
 PY_LDFLAGS_NODIST=$(CONFIGURE_LDFLAGS_NODIST) $(LDFLAGS_NODIST)
 NO_AS_NEEDED=	-Wl,--no-as-needed
 SGI_ABI=	@SGI_ABI@
-CCSHARED=	-fPIC
+CCSHARED=	
 # LINKFORSHARED are the flags passed to the $(CC) command that links
 # the python executable -- this is only needed for a few systems
-LINKFORSHARED=	-Xlinker -export-dynamic
+LINKFORSHARED=	
 ARFLAGS=	rcs
 # Extra C flags added for building the interpreter object files.
 CFLAGSFORSHARED=
@@ -123,11 +123,11 @@ CFLAGS_ALIASING=
 
 
 # Machine-dependent subdirectories
-MACHDEP=	linux
+MACHDEP=	mingw64_nt-10.0-219963
 
 # Multiarch directory (may be empty)
-MULTIARCH=	x86_64-linux-gnu
-MULTIARCH_CPPFLAGS = -DMULTIARCH=\"x86_64-linux-gnu\"
+MULTIARCH=	
+MULTIARCH_CPPFLAGS = 
 
 # Install prefix for architecture-independent files
 prefix=		/usr/local
@@ -158,10 +158,10 @@ CONFINCLUDEPY=	$(CONFINCLUDEDIR)/python$(LDVERSION)
 
 # Symbols used for using shared libraries
 SHLIB_SUFFIX=	.so
-EXT_SUFFIX=	.cpython-310-x86_64-linux-gnu.so
-LDSHARED=	$(CC) -shared $(PY_LDFLAGS)
-BLDSHARED=	$(CC) -shared $(PY_CORE_LDFLAGS)
-LDCXXSHARED=	$(CXX) -shared
+EXT_SUFFIX=	.cpython-310.so
+LDSHARED=	ld $(PY_LDFLAGS)
+BLDSHARED=	ld $(PY_CORE_LDFLAGS)
+LDCXXSHARED=	ld
 DESTSHARED=	$(BINLIBDEST)/lib-dynload
 
 # List of exported symbols for AIX
@@ -169,7 +169,7 @@ EXPORTSYMS=
 EXPORTSFROM=	
 
 # Executable suffix (.exe on Windows and Mac OS X)
-EXE=		
+EXE=		.exe
 BUILDEXE=	.exe
 
 # Short name and location for Mac OS X Python framework
@@ -218,7 +218,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	
+CONFIG_ARGS=	 'PKG_CONFIG_PATH=/mingw64/lib/pkgconfig:/mingw64/share/pkgconfig'
 
 
 # Subdirectories with code
@@ -246,14 +246,14 @@ PY_ENABLE_SHARED=	0
 STATIC_LIBPYTHON=	1
 
 
-LIBS=		-lcrypt -lpthread -ldl  -lutil -lm
+LIBS=		 -lm
 LIBM=		-lm
 LIBC=		
 SYSLIBS=	$(LIBM) $(LIBC)
 SHLIBS=		$(LIBS)
 
 DLINCLDIR=	.
-DYNLOADFILE=	dynload_shlib.o
+DYNLOADFILE=	dynload_stub.o
 MACHDEP_OBJS=	
 LIBOBJDIR=	Python/
 LIBOBJS=	
@@ -265,8 +265,8 @@ PYTHON_FOR_REGEN?=python3
 UPDATE_FILE=$(PYTHON_FOR_REGEN) $(srcdir)/Tools/scripts/update_file.py
 PYTHON_FOR_BUILD=./$(BUILDPYTHON) -E
 _PYTHON_HOST_PLATFORM=
-BUILD_GNU_TYPE=	x86_64-pc-linux-gnu
-HOST_GNU_TYPE=	x86_64-pc-linux-gnu
+BUILD_GNU_TYPE=	x86_64-pc-mingw64
+HOST_GNU_TYPE=	x86_64-pc-mingw64
 
 # Tcl and Tk config info from --with-tcltk-includes and -libs options
 TCLTK_INCLUDES=	
@@ -1701,7 +1701,7 @@ inclinstall:
 
 # Install the library and miscellaneous stuff needed for extending/embedding
 # This goes into $(exec_prefix)
-LIBPL=		$(prefix)/lib/python3.10/config-$(VERSION)$(ABIFLAGS)-x86_64-linux-gnu
+LIBPL=		$(prefix)/lib/python3.10/config-$(VERSION)$(ABIFLAGS)
 
 # pkgconfig directory
 LIBPC=		$(LIBDIR)/pkgconfig
