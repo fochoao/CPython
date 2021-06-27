@@ -1,10 +1,12 @@
 # CPython 3.10.0 Beta 3.
 
 <div align="left">
+        <a href="https://python.org" target="_blank">
         <img
             alt="PHP Logo"
             title="PHP Logo"
             src="https://www.python.org/static/img/python-logo.png" />
+        </a>
 </div>
 
 Released in 32 bits and 64 bits, place inside C:\cpython\
@@ -12,7 +14,7 @@ Released in 32 bits and 64 bits, place inside C:\cpython\
 # This is Python version 3.10.0 beta 3
 
 <div align="left">
-        <a href="https://travis-ci.com/python/cpython" target="_new">
+        <a href="https://travis-ci.com/python/cpython" target="_blank">
         <img
             alt="CPython build status on Travis CI"
             title="CPython build status on Travis CI"
