@@ -8,8 +8,9 @@
             width="250">
 </div>
 
-This is Python version 3.10.0 beta 3
-====================================
+Released in 32 bits and 64 bits, place in C:\ folder cpython, inside C:\cpython\
+
+# This is Python version 3.10.0 beta 3
 
 .. image:: https://travis-ci.com/python/cpython.svg?branch=master
    :alt: CPython build status on Travis CI
