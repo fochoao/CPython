@@ -8,7 +8,7 @@ jobs:
   displayName: Pre-build checks
 
   pool:
-- task: DownloadPackage@1
+
   inputs:
     packageType: 'pypi'
     feed: '/71ac2e02-1f7e-453a-9a15-77551f52e9da'
