@@ -51,7 +51,7 @@ Maximize Window, on the top right You should see: "Advanced System Settings".
 
 Click on Environment Variables.
 
-On System Variables, Click "New..."
+On System Variables, Click "New...".
 
 Now on Variable Name write: PYTHONPATH
 And on Variable Value write: C:\cpython\
@@ -76,9 +76,8 @@ C:\cpython\Lib\site-packages\
 
 Now associate PYD, PYC and PY files to C:\cpython\python.exe
 
-Reboot... that should do the work, revisiti none other Python versions are on the Path folders, if so, remove them.
-
-That is all the configuration You need to do.
+Reboot... that should do the work, revisit none other Python versions are on the "Path" folder, if so, remove any.
+That is all the configuration You need to do, with the build I made.
 
 # General Information
 
