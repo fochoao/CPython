@@ -7,8 +7,6 @@ jobs:
 - job: Prebuild
   displayName: Pre-build checks
 
-  pool:
-
   steps:
   - template: ./prebuild-checks.yml
 
