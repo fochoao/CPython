@@ -37,11 +37,10 @@ Released in 32 bits and 64 bits, place inside C:\cpython\
             src="https://img.shields.io/badge/discourse-join_chat-brightgreen.svg" />
         </a>
 </div>
-
-
-
+<br />
+<br />
 Copyright (c) 2001-2021 Python Software Foundation.  All rights reserved.
-
+<br />
 See the end of this file for further copyright and license information.
 
 # Contents
