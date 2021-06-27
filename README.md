@@ -4,7 +4,7 @@
         <img
             alt="PHP Logo"
             title="PHP Logo"
-            src="https://www.python.org/static/img/python-logo.png">
+            src="https://www.python.org/static/img/python-logo.png" />
 </div>
 
 Released in 32 bits and 64 bits, place inside C:\cpython\
@@ -15,7 +15,7 @@ Released in 32 bits and 64 bits, place inside C:\cpython\
         <img
             alt="CPython build status on Travis CI"
             title="CPython build status on Travis CI"
-            src="https://travis-ci.com/python/cpython.svg?branch=master">
+            src="https://travis-ci.com/python/cpython.svg?branch=master" />
 </div>
 
 .. image:: https://github.com/python/cpython/workflows/Tests/badge.svg
