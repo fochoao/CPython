@@ -4,8 +4,7 @@
         <img
             alt="PHP Logo"
             title="PHP Logo"
-            src="https://www.python.org/static/img/python-logo.png"
-            width="250">
+            src="https://www.python.org/static/img/python-logo.png">
 </div>
 
 Released in 32 bits and 64 bits, place in C:\ folder cpython, inside C:\cpython\
