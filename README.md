@@ -45,6 +45,16 @@ Copyright (c) 2001-2021 Python Software Foundation.  All rights reserved.
 <br />
 <br />
 See the end of this file for further copyright and license information.
+<br />
+<br />
+<div align="left">
+        <img
+            alt="CPython build status on Travis CI"
+            title="CPython build status on Travis CI"
+            src="https://i.imgur.com/PUjhB3G.png" />
+</div>
+<br />
+<br />
 
 # Contents
 
