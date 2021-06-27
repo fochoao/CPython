@@ -5,7 +5,7 @@
             alt="PHP Logo"
             title="PHP Logo"
             src="https://www.python.org/static/img/python-logo.png"
-            width="180">
+            width="250">
 </div>
 
 This is Python version 3.10.0 beta 3
