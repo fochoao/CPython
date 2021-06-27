@@ -12,10 +12,12 @@ Released in 32 bits and 64 bits, place inside C:\cpython\
 # This is Python version 3.10.0 beta 3
 
 <div align="center">
+        <a href="https://travis-ci.com/python/cpython" target="_new">
         <img
             alt="CPython build status on Travis CI"
             title="CPython build status on Travis CI"
             src="https://travis-ci.com/python/cpython.svg?branch=master" />
+        </a>
 </div>
 
 .. image:: https://github.com/python/cpython/workflows/Tests/badge.svg
