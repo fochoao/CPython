@@ -8,6 +8,13 @@ jobs:
   displayName: Pre-build checks
 
   pool:
+- task: DownloadPackage@1
+  inputs:
+    packageType: 'pypi'
+    feed: '/71ac2e02-1f7e-453a-9a15-77551f52e9da'
+    view: '0a9ffeda-8b2b-48fd-bf88-aec49727989d'
+    definition: 
+    downloadPath: '$(System.ArtifactsDirectory)'
     vmImage: ubuntu-18.04
 
   steps:
