@@ -1,6 +1,6 @@
 # CPython 3.10.0 Beta 3.
 
-<div align="center">
+<div align="left">
         <img
             alt="PHP Logo"
             title="PHP Logo"
@@ -11,7 +11,7 @@ Released in 32 bits and 64 bits, place inside C:\cpython\
 
 # This is Python version 3.10.0 beta 3
 
-<div align="center">
+<div align="left">
         <a href="https://travis-ci.com/python/cpython" target="_new">
         <img
             alt="CPython build status on Travis CI"
