@@ -4,8 +4,8 @@
 @rem rebuild.
 @rem This is only meant as a convenience for developing CPython
 @rem and using it outside of that context is ill-advised.
-@echo Running Release^|Win32 interpreter...
+@echo Running Release^|ARM64 interpreter...
 @setlocal
 @set PYTHONHOME=C:\cpython\
 
-@"C:\cpython\PCbuild\win32\python.exe" %*
+@"C:\cpython\python.exe" %*
