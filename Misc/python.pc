@@ -1,5 +1,5 @@
 # See: man pkg-config
-prefix=/usr/local
+prefix=/ucrt64
 exec_prefix=${prefix}
 libdir=${exec_prefix}/lib
 includedir=${prefix}/include
@@ -8,6 +8,6 @@ Name: Python
 Description: Build a C extension for Python
 Requires:
 Version: 3.10
-Libs.private:  -lm
+Libs.private: -lintl  -lm
 Libs:
 Cflags: -I${includedir}/python3.10

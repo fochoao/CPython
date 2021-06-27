@@ -24,6 +24,9 @@ extern "C" {
  * OpenSSL was configured with the following options:
  */
 
+#ifndef OPENSSL_SYS_WIN64A
+# define OPENSSL_SYS_WIN64A 1
+#endif
 #ifndef OPENSSL_NO_MD2
 # define OPENSSL_NO_MD2
 #endif
@@ -196,7 +199,7 @@ extern "C" {
 # undef THIRTY_TWO_BIT
 #endif
 
-#define RC4_INT unsigned char
+#define RC4_INT unsigned int
 
 #ifdef  __cplusplus
 }
