@@ -24,25 +24,27 @@ Released in 32 bits and 64 bits, place inside C:\cpython\
             title="CPython build status on GitHub Actions"
             src="https://github.com/python/cpython/workflows/Tests/badge.svg" />
         </a>
+        <a href="https://dev.azure.com/python/cpython/_build/latest?definitionId=4&branchName=master" target="_new">
+        <img
+            alt="CPython build status on Azure DevOps"
+            title="CPython build status on Azure DevOps"
+            src="https://dev.azure.com/python/cpython/_apis/build/status/Azure%20Pipelines%20CI?branchName=master" />
+        </a>
+        <a href="https://discuss.python.org/" target="_new">
+        <img
+            alt="Python Discourse chat"
+            title="Python Discourse chat"
+            src="https://img.shields.io/badge/discourse-join_chat-brightgreen.svg" />
+        </a>
 </div>
-
-.. image:: https://dev.azure.com/python/cpython/_apis/build/status/Azure%20Pipelines%20CI?branchName=master
-   :alt: CPython build status on Azure DevOps
-   :target: https://dev.azure.com/python/cpython/_build/latest?definitionId=4&branchName=master
-
-.. image:: https://img.shields.io/badge/discourse-join_chat-brightgreen.svg
-   :alt: Python Discourse chat
-   :target: https://discuss.python.org/
-
 
 Copyright (c) 2001-2021 Python Software Foundation.  All rights reserved.
 
 See the end of this file for further copyright and license information.
 
-.. contents::
+# Contents
 
-General Information
--------------------
+# General Information
 
 - Website: https://www.python.org
 - Source code: https://github.com/python/cpython
@@ -50,24 +52,21 @@ General Information
 - Documentation: https://docs.python.org
 - Developer's Guide: https://devguide.python.org/
 
-Contributing to CPython
------------------------
+# Contributing to CPytho
 
 For more complete instructions on contributing to CPython development,
-see the `Developer Guide`_.
+see the `Developer Guide`.
 
-.. _Developer Guide: https://devguide.python.org/
+Developer Guide: https://devguide.python.org/
 
-Using Python
-------------
+# Using Python
 
 Installable Python kits, and information about using Python, are available at
-`python.org`_.
+`python.org`.
 
-.. _python.org: https://www.python.org/
+python.org: https://www.python.org/
 
-Build Instructions
-------------------
+# Build Instructions
 
 On Unix, Linux, BSD, macOS, and Cygwin::
 
@@ -86,16 +85,16 @@ Building a complete Python installation requires the use of various
 additional third-party libraries, depending on your build platform and
 configure options.  Not all standard library modules are buildable or
 useable on all platforms.  Refer to the
-`Install dependencies <https://devguide.python.org/setup/#install-dependencies>`_
+`Install dependencies <https://devguide.python.org/setup/#install-dependencies>`
 section of the `Developer Guide`_ for current detailed information on
 dependencies for various Linux distributions and macOS.
 
 On macOS, there are additional configure and build options related
 to macOS framework and universal builds.  Refer to `Mac/README.rst
-<https://github.com/python/cpython/blob/master/Mac/README.rst>`_.
+<https://github.com/python/cpython/blob/master/Mac/README.rst>`.
 
 On Windows, see `PCbuild/readme.txt
-<https://github.com/python/cpython/blob/master/PCbuild/readme.txt>`_.
+<https://github.com/python/cpython/blob/master/PCbuild/readme.txt>`.
 
 If you wish, you can create a subdirectory and invoke configure from there.
 For example::
@@ -115,8 +114,7 @@ Profile Guided Optimization (PGO) and may be used to auto-enable Link Time
 Optimization (LTO) on some platforms.  For more details, see the sections
 below.
 
-Profile Guided Optimization
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# Profile Guided Optimization
 
 PGO takes advantage of recent versions of the GCC or Clang compilers.  If used,
 either via ``configure --enable-optimizations`` or by manually running
@@ -141,8 +139,7 @@ collected from the instrumented one.  The end result will be a Python binary
 that is optimized; suitable for distribution or production installation.
 
 
-Link Time Optimization
-^^^^^^^^^^^^^^^^^^^^^^
+# Link Time Optimization
 
 Enabled via configure's ``--with-lto`` flag.  LTO takes advantage of the
 ability of recent compiler toolchains to optimize across the otherwise
@@ -150,22 +147,20 @@ arbitrary ``.o`` file boundary when building final executables or shared
 libraries for additional performance gains.
 
 
-What's New
-----------
+# What's New
 
 We have a comprehensive overview of the changes in the `What's New in Python
-3.10 <https://docs.python.org/3.10/whatsnew/3.10.html>`_ document.  For a more
+3.10 <https://docs.python.org/3.10/whatsnew/3.10.html>` document.  For a more
 detailed change log, read `Misc/NEWS
-<https://github.com/python/cpython/blob/master/Misc/NEWS.d>`_, but a full
+<https://github.com/python/cpython/blob/master/Misc/NEWS.d>`, but a full
 accounting of changes can only be gleaned from the `commit history
-<https://github.com/python/cpython/commits/master>`_.
+<https://github.com/python/cpython/commits/master>`.
 
 If you want to install multiple versions of Python, see the section below
 entitled "Installing multiple versions".
 
 
-Documentation
--------------
+# Documentation
 
 `Documentation for Python 3.10 <https://docs.python.org/3.10/>`_ is online,
 updated daily.
@@ -179,8 +174,7 @@ For information about building Python's documentation, refer to `Doc/README.rst
 <https://github.com/python/cpython/blob/master/Doc/README.rst>`_.
 
 
-Converting From Python 2.x to 3.x
----------------------------------
+# Converting From Python 2.x to 3.x
 
 Significant backward incompatible changes were made for the release of Python
 3.0, which may cause programs written for Python 2 to fail when run with Python
@@ -212,8 +206,7 @@ include relevant output from that command to show the issue.
 See `Running & Writing Tests <https://devguide.python.org/runtests/>`_
 for more on running tests.
 
-Installing multiple versions
-----------------------------
+# Installing multiple versions
 
 On Unix and Mac systems if you intend to install multiple versions of Python
 using the same installation prefix (``--prefix`` argument to the configure
@@ -231,37 +224,33 @@ primary version, you would execute ``make install`` in your 3.10 build directory
 and ``make altinstall`` in the others.
 
 
-Issue Tracker and Mailing List
-------------------------------
+# Issue Tracker and Mailing List
 
 Bug reports are welcome!  You can use the `issue tracker
-<https://bugs.python.org>`_ to report bugs, and/or submit pull requests `on
-GitHub <https://github.com/python/cpython>`_.
+<https://bugs.python.org>` to report bugs, and/or submit pull requests `on
+GitHub <https://github.com/python/cpython>`.
 
 You can also follow development discussion on the `python-dev mailing list
-<https://mail.python.org/mailman/listinfo/python-dev/>`_.
+<https://mail.python.org/mailman/listinfo/python-dev/>`.
 
 
-Proposals for enhancement
--------------------------
+# Proposals for enhancement
 
 If you have a proposal to change Python, you may want to send an email to the
 comp.lang.python or `python-ideas`_ mailing lists for initial feedback.  A
 Python Enhancement Proposal (PEP) may be submitted if your idea gains ground.
 All current PEPs, as well as guidelines for submitting a new PEP, are listed at
-`python.org/dev/peps/ <https://www.python.org/dev/peps/>`_.
+`python.org/dev/peps/ <https://www.python.org/dev/peps/>`.
 
-.. _python-ideas: https://mail.python.org/mailman/listinfo/python-ideas/
+python-ideas: https://mail.python.org/mailman/listinfo/python-ideas/
 
 
-Release Schedule
-----------------
+# Release Schedule
 
 See :pep:`619` for Python 3.10 release details.
 
 
-Copyright and License Information
----------------------------------
+# Copyright and License Information
 
 Copyright (c) 2001-2021 Python Software Foundation.  All rights reserved.
 
