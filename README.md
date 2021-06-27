@@ -44,6 +44,42 @@ See the end of this file for further copyright and license information.
 
 # Contents
 
+# Configure variables
+
+On Windows 10, right-click on File Explorer, This Pc, Properties.
+Maximize Window, on the top right You should see: "Advanced System Settings".
+
+Click on Environment Variables.
+
+On System Variables, Click "New..."
+
+Now on Variable Name write: PYTHONPATH
+And on Variable Value write: C:\cpython\
+Now press on OK.
+
+Then do the same again but this time.
+
+Now on Variable Name write: PYTHONHOME
+And on Variable Value write: C:\cpython\
+Now press on OK.
+
+We need to double click on Variable: Path.
+Once You double click on it add the next folders:
+
+Press new and add:
+
+C:\cpython\
+C:\cpython\DLLs\
+C:\cpython\Scripts\
+C:\cpython\Lib\
+C:\cpython\Lib\site-packages\
+
+Now associate PYD, PYC and PY files to C:\cpython\python.exe
+
+Reboot... that should do the work, revisiti none other Python versions are on the Path folders, if so, remove them.
+
+That is all the configuration You need to do.
+
 # General Information
 
 - Website: https://www.python.org
@@ -52,7 +88,7 @@ See the end of this file for further copyright and license information.
 - Documentation: https://docs.python.org
 - Developer's Guide: https://devguide.python.org/
 
-# Contributing to CPytho
+# Contributing to CPython
 
 For more complete instructions on contributing to CPython development,
 see the `Developer Guide`.
