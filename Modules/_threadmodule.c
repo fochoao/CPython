@@ -1083,6 +1083,11 @@ thread_run(void *boot_raw)
 
     tstate = boot->tstate;
     tstate->thread_id = PyThread_get_thread_ident();
+#ifdef PY_HAVE_THREAD_NATIVE_ID
+    tstate->native_thread_id = PyThread_get_thread_native_id();
+#else
+    tstate->native_thread_id = 0;
+#endif
     _PyThreadState_Init(tstate);
     PyEval_AcquireThread(tstate);
     tstate->interp->num_threads++;
@@ -1105,7 +1110,9 @@ thread_run(void *boot_raw)
     PyThreadState_Clear(tstate);
     _PyThreadState_DeleteCurrent(tstate);
 
-    PyThread_exit_thread();
+    // bpo-44434: Don't call explicitly PyThread_exit_thread(). On Linux with
+    // the glibc, pthread_exit() can abort the whole process if dlopen() fails
+    // to open the libgcc_s.so library (ex: EMFILE error).
 }
 
 static PyObject *

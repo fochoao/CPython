@@ -21,7 +21,6 @@ import pprint
 import urllib.request
 import threading
 import traceback
-import asyncore
 import weakref
 import platform
 import sysconfig
@@ -30,6 +29,11 @@ try:
     import ctypes
 except ImportError:
     ctypes = None
+
+import warnings
+with warnings.catch_warnings():
+    warnings.simplefilter('ignore', DeprecationWarning)
+    import asyncore
 
 ssl = import_helper.import_module("ssl")
 import _ssl
@@ -358,11 +362,7 @@ class BasicSocketTests(unittest.TestCase):
             with self.subTest(ssl_type=ssl_type):
                 with self.assertRaisesRegex(TypeError, "immutable type"):
                     ssl_type.value = None
-        with self.assertRaisesRegex(
-            TypeError,
-            "cannot create '_ssl.Certificate' instances"
-        ):
-            _ssl.Certificate()
+        support.check_disallow_instantiation(self, _ssl.Certificate)
 
     def test_private_init(self):
         with self.assertRaisesRegex(TypeError, "public constructor"):
@@ -2447,9 +2447,14 @@ class ThreadedEchoServer(threading.Thread):
                 self.server.conn_errors.append(str(e))
                 if self.server.chatty:
                     handle_error("\n server:  bad connection attempt from " + repr(self.addr) + ":\n")
-                self.running = False
-                self.server.stop()
-                self.close()
+
+                # bpo-44229, bpo-43855, bpo-44237, and bpo-33450:
+                # Ignore spurious EPROTOTYPE returned by write() on macOS.
+                # See also http://erickt.github.io/blog/2014/11/19/adventures-in-debugging-a-potential-osx-kernel-bug/
+                if e.errno != errno.EPROTOTYPE and sys.platform != "darwin":
+                    self.running = False
+                    self.server.stop()
+                    self.close()
                 return False
             else:
                 self.server.shared_ciphers.append(self.sslconn.shared_ciphers())
@@ -3249,23 +3254,16 @@ class ThreadedTests(unittest.TestCase):
              client_context.wrap_socket(socket.socket(),
                                         server_hostname=hostname,
                                         suppress_ragged_eofs=False) as s:
-            # TLS 1.3 perform client cert exchange after handshake
             s.connect((HOST, server.port))
-            try:
+            with self.assertRaisesRegex(
+                ssl.SSLError,
+                'alert unknown ca|EOF occurred'
+            ):
+                # TLS 1.3 perform client cert exchange after handshake
                 s.write(b'data')
                 s.read(1000)
                 s.write(b'should have failed already')
                 s.read(1000)
-            except ssl.SSLError as e:
-                if support.verbose:
-                    sys.stdout.write("\nSSLError is %r\n" % e)
-            except OSError as e:
-                if e.errno != errno.ECONNRESET:
-                    raise
-                if support.verbose:
-                    sys.stdout.write("\nsocket.error is %r\n" % e)
-            else:
-                self.fail("Use of invalid cert should have failed!")
 
     def test_rude_shutdown(self):
         """A brutal shutdown of an SSL server should raise an OSError

@@ -280,7 +280,7 @@ CertificateError = SSLCertVerificationError
 def _dnsname_match(dn, hostname):
     """Matching according to RFC 6125, section 6.4.3
 
-    - Hostnames are compared lower case.
+    - Hostnames are compared lower-case.
     - For IDNA, both dn and hostname must be encoded as IDN A-label (ACE).
     - Partial wildcards like 'www*.example.org', multiple wildcards, sole
       wildcard or wildcards in labels other then the left-most label are not
@@ -368,7 +368,7 @@ def _ipaddress_match(cert_ipaddress, host_ip):
     (section 1.7.2 - "Out of Scope").
     """
     # OpenSSL may add a trailing newline to a subjectAltName's IP address,
-    # commonly woth IPv6 addresses. Strip off trailing \n.
+    # commonly with IPv6 addresses. Strip off trailing \n.
     ip = _inet_paton(cert_ipaddress.rstrip())
     return ip == host_ip
 

@@ -1,3 +1,5 @@
+name: Release_$(Build.SourceBranchName)_$(SourceTag)_$(Date:yyyyMMdd)$(Rev:.rr)
+
 variables:
     __RealSigningCertificate: 'Python Software Foundation'
 # QUEUE TIME VARIABLES
