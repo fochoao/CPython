@@ -1,0 +1,6 @@
+﻿  python.c
+  python.vcxproj -> C:\cpython\PCbuild\arm64\python_d.exe
+C:\cpython\PCbuild\regen.targets(110,5): warning : License file C:\cpython\externals\tcltk-8.6.11.0\arm64\tcllicense.terms is missing
+C:\cpython\PCbuild\regen.targets(110,5): warning : License file C:\cpython\externals\tcltk-8.6.11.0\arm64\tklicense.terms is missing
+C:\cpython\PCbuild\regen.targets(110,5): warning : License file C:\cpython\externals\tcltk-8.6.11.0\arm64\tixlicense.terms is missing
+  Wrote C:\cpython\PCbuild\arm64\LICENSE.txt

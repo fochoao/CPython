@@ -1,0 +1,4 @@
+﻿  _ssl.c
+  applink.c
+     Creating library C:\cpython\PCbuild\arm32\_ssl_d.lib and object C:\cpython\PCbuild\arm32\_ssl_d.exp
+  _ssl.vcxproj -> C:\cpython\PCbuild\arm32\_ssl_d.pyd

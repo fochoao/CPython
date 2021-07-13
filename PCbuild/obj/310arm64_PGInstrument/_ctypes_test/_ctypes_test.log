@@ -1,0 +1,6 @@
+﻿  _ctypes_test.c
+  _ctypes_test.obj : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     Creating library C:\cpython\PCbuild\arm64\instrumented\_ctypes_test.lib and object C:\cpython\PCbuild\arm64\instrumented\_ctypes_test.exp
+  Generating code
+  Finished generating code
+  _ctypes_test.vcxproj -> C:\cpython\PCbuild\arm64\instrumented\_ctypes_test.pyd

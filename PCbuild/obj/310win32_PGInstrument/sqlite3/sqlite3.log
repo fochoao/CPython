@@ -1,0 +1,6 @@
+﻿  sqlite3.c
+  sqlite3.obj : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     Creating library C:\cpython\PCbuild\win32\instrumented\sqlite3.lib and object C:\cpython\PCbuild\win32\instrumented\sqlite3.exp
+  Generating code
+  Finished generating code
+  sqlite3.vcxproj -> C:\cpython\PCbuild\win32\instrumented\sqlite3.dll

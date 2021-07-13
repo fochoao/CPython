@@ -1,0 +1,12 @@
+﻿  cache.c
+  connection.c
+  cursor.c
+  microprotocols.c
+  module.c
+  prepare_protocol.c
+  row.c
+  statement.c
+  util.c
+  Generating Code...
+     Creating library C:\cpython\PCbuild\arm32\_sqlite3_d.lib and object C:\cpython\PCbuild\arm32\_sqlite3_d.exp
+  _sqlite3.vcxproj -> C:\cpython\PCbuild\arm32\_sqlite3_d.pyd

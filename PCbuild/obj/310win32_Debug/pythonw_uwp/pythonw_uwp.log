@@ -1,2 +1,15 @@
 ﻿  python_uwp.cpp
-  pythonw_uwp.vcxproj -> C:\cpython\PCbuild\win32\pythonw_uwp_d.exe
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__PyStatus_Ok referenced in function "struct PyStatus __cdecl set_process_name(struct PyConfig *)" (?set_process_name@@YA?AUPyStatus@@PAUPyConfig@@@Z)
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__PyStatus_IsExit referenced in function _wmain
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__PyStatus_Exception referenced in function "struct PyStatus __cdecl set_process_name(struct PyConfig *)" (?set_process_name@@YA?AUPyStatus@@PAUPyConfig@@@Z)
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__PyPreConfig_InitPythonConfig referenced in function _wmain
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__PyConfig_InitPythonConfig referenced in function _wmain
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__PyConfig_Clear referenced in function _wmain
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__PyConfig_SetString referenced in function "struct PyStatus __cdecl set_process_name(struct PyConfig *)" (?set_process_name@@YA?AUPyStatus@@PAUPyConfig@@@Z)
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__PyConfig_SetArgv referenced in function _wmain
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__Py_PreInitializeFromArgs referenced in function _wmain
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__Py_InitializeFromConfig referenced in function _wmain
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__Py_RunMain referenced in function _wmain
+python_uwp.obj : error LNK2019: unresolved external symbol __imp__Py_ExitStatusException referenced in function _wmain
+C:\cpython\PCbuild\arm32\python310_d.lib : warning LNK4272: library machine type 'ARM' conflicts with target machine type 'x86'
+C:\cpython\PCbuild\win32\pythonw_uwp_d.exe : fatal error LNK1120: 12 unresolved externals
