@@ -1,7 +1,7 @@
 ﻿  Killing any running python_d.exe instances...
   Generated sources are up to date
   Getting build info from git
-  Building heads/master-dirty:5b0b4c9ab master
+  Building heads/master-dirty:e252ff3e1 master
   _abc.c
   _bisectmodule.c
   blake2module.c
