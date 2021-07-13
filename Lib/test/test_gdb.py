@@ -666,16 +666,15 @@ id(a)''')
 
     def test_frames(self):
         gdb_output = self.get_stack_trace('''
-import sys
 def foo(a, b, c):
-    return sys._getframe(0)
+    pass
 
-f = foo(3, 4, 5)
-id(f)''',
+foo(3, 4, 5)
+id(foo.__code__)''',
                                           breakpoint='builtin_id',
-                                          cmds_after_breakpoint=['print (PyFrameObject*)v']
+                                          cmds_after_breakpoint=['print (PyFrameObject*)(((PyCodeObject*)v)->co_zombieframe)']
                                           )
-        self.assertTrue(re.match(r'.*\s+\$1 =\s+Frame 0x-?[0-9a-f]+, for file <string>, line 4, in foo \(a=3.*',
+        self.assertTrue(re.match(r'.*\s+\$1 =\s+Frame 0x-?[0-9a-f]+, for file <string>, line 3, in foo \(\)\s+.*',
                                  gdb_output,
                                  re.DOTALL),
                         'Unexpected gdb representation: %r\n%s' % (gdb_output, gdb_output))

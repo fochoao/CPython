@@ -1585,7 +1585,7 @@ class PyBuildExt(build_ext):
                 sqlite_libdir = [os.path.abspath(os.path.dirname(sqlite_libfile))]
 
         if sqlite_incdir and sqlite_libdir:
-            sqlite_srcs = [
+            sqlite_srcs = ['_sqlite/cache.c',
                 '_sqlite/connection.c',
                 '_sqlite/cursor.c',
                 '_sqlite/microprotocols.c',

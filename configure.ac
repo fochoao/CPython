@@ -6,7 +6,7 @@ dnl Python's configure script requires autoconf 2.69 and autoconf-archive.
 dnl
 
 # Set VERSION so we only need to edit in one place (i.e., here)
-m4_define(PYTHON_VERSION, 3.11)
+m4_define(PYTHON_VERSION, 3.10)
 
 AC_PREREQ([2.69])
 
@@ -128,21 +128,21 @@ VERSION=PYTHON_VERSION
 AC_SUBST(SOVERSION)
 SOVERSION=1.0
 
-# The later definition of _XOPEN_SOURCE disables certain features
+# The later defininition of _XOPEN_SOURCE disables certain features
 # on Linux, so we need _GNU_SOURCE to re-enable them (makedev, tm_zone).
 AC_DEFINE(_GNU_SOURCE, 1, [Define on Linux to activate all library features])
 
-# The later definition of _XOPEN_SOURCE and _POSIX_C_SOURCE disables
+# The later defininition of _XOPEN_SOURCE and _POSIX_C_SOURCE disables
 # certain features on NetBSD, so we need _NETBSD_SOURCE to re-enable
 # them.
 AC_DEFINE(_NETBSD_SOURCE, 1, [Define on NetBSD to activate all library features])
 
-# The later definition of _XOPEN_SOURCE and _POSIX_C_SOURCE disables
+# The later defininition of _XOPEN_SOURCE and _POSIX_C_SOURCE disables
 # certain features on FreeBSD, so we need __BSD_VISIBLE to re-enable
 # them.
 AC_DEFINE(__BSD_VISIBLE, 1, [Define on FreeBSD to activate all library features])
 
-# The later definition of _XOPEN_SOURCE and _POSIX_C_SOURCE disables
+# The later defininition of _XOPEN_SOURCE and _POSIX_C_SOURCE disables
 # certain features on Mac OS X, so we need _DARWIN_C_SOURCE to re-enable
 # them.
 AC_DEFINE(_DARWIN_C_SOURCE, 1, [Define on Darwin to activate all library features])
@@ -2976,7 +2976,7 @@ esac
 [AC_MSG_RESULT(default)])
 
 validate_tzpath() {
-    # Checks that each element of the path is an absolute path
+    # Checks that each element of hte path is an absolute path
     if test -z "$1"; then
         # Empty string is allowed: it indicates no system TZPATH
         return 0

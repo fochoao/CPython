@@ -52,6 +52,8 @@ typedef struct
     PyObject* in_weakreflist; /* List of weak references */
 } pysqlite_Cursor;
 
+extern PyTypeObject *pysqlite_CursorType;
+
 int pysqlite_cursor_setup_types(PyObject *module);
 
 #define UNKNOWN (-1)

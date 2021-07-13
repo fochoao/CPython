@@ -40,8 +40,6 @@ elif _WINDOWS:
     import nt
 
 COPY_BUFSIZE = 1024 * 1024 if _WINDOWS else 64 * 1024
-# This should never be removed, see rationale in:
-# https://bugs.python.org/issue43743#msg393429
 _USE_CP_SENDFILE = hasattr(os, "sendfile") and sys.platform.startswith("linux")
 _HAS_FCOPYFILE = posix and hasattr(posix, "_fcopyfile")  # macOS
 
@@ -253,36 +251,28 @@ def copyfile(src, dst, *, follow_symlinks=True):
     if not follow_symlinks and _islink(src):
         os.symlink(os.readlink(src), dst)
     else:
-        try:
-            with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
-                # macOS
-                if _HAS_FCOPYFILE:
-                    try:
-                        _fastcopy_fcopyfile(fsrc, fdst, posix._COPYFILE_DATA)
-                        return dst
-                    except _GiveupOnFastCopy:
-                        pass
-                # Linux
-                elif _USE_CP_SENDFILE:
-                    try:
-                        _fastcopy_sendfile(fsrc, fdst)
-                        return dst
-                    except _GiveupOnFastCopy:
-                        pass
-                # Windows, see:
-                # https://github.com/python/cpython/pull/7160#discussion_r195405230
-                elif _WINDOWS and file_size > 0:
-                    _copyfileobj_readinto(fsrc, fdst, min(file_size, COPY_BUFSIZE))
+        with open(src, 'rb') as fsrc, open(dst, 'wb') as fdst:
+            # macOS
+            if _HAS_FCOPYFILE:
+                try:
+                    _fastcopy_fcopyfile(fsrc, fdst, posix._COPYFILE_DATA)
                     return dst
+                except _GiveupOnFastCopy:
+                    pass
+            # Linux
+            elif _USE_CP_SENDFILE:
+                try:
+                    _fastcopy_sendfile(fsrc, fdst)
+                    return dst
+                except _GiveupOnFastCopy:
+                    pass
+            # Windows, see:
+            # https://github.com/python/cpython/pull/7160#discussion_r195405230
+            elif _WINDOWS and file_size > 0:
+                _copyfileobj_readinto(fsrc, fdst, min(file_size, COPY_BUFSIZE))
+                return dst
 
-                copyfileobj(fsrc, fdst)
-
-        # Issue 43219, raise a less confusing exception
-        except IsADirectoryError as e:
-            if os.path.exists(dst):
-                raise
-            else:
-                raise FileNotFoundError(f'Directory does not exist: {dst}') from e
+            copyfileobj(fsrc, fdst)
 
     return dst
 

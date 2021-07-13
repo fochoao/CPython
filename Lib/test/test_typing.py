@@ -3,7 +3,6 @@ import collections
 import pickle
 import re
 import sys
-import warnings
 from unittest import TestCase, main, skipUnless, skip
 from copy import copy, deepcopy
 
@@ -517,7 +516,7 @@ class LiteralTests(BaseTestCase):
 
     def test_illegal_parameters_do_not_raise_runtime_errors(self):
         # Type checkers should reject these types, but we do not
-        # raise errors at runtime to maintain maximum flexibility.
+        # raise errors at runtime to maintain maximium flexibility.
         Literal[int]
         Literal[3j + 2, ..., ()]
         Literal[{"foo": 3, "bar": 4}]
@@ -1977,7 +1976,7 @@ class GenericTests(BaseTestCase):
         T = TypeVar('T')
         things = [Any, Union[T, int], Callable[..., T], Tuple[Any, Any],
                   Optional[List[int]], typing.Mapping[int, str],
-                  typing.Match[bytes], typing.Iterable['whatever']]
+                  typing.re.Match[bytes], typing.Iterable['whatever']]
         for t in things:
             self.assertEqual(weakref.ref(t)(), t)
 
@@ -4008,15 +4007,12 @@ class IOTests(BaseTestCase):
         self.assertEqual(a.__parameters__, ())
 
     def test_io_submodule(self):
-        with warnings.catch_warnings(record=True) as w:
-            warnings.filterwarnings("default", category=DeprecationWarning)
-            from typing.io import IO, TextIO, BinaryIO, __all__, __name__
-            self.assertIs(IO, typing.IO)
-            self.assertIs(TextIO, typing.TextIO)
-            self.assertIs(BinaryIO, typing.BinaryIO)
-            self.assertEqual(set(__all__), set(['IO', 'TextIO', 'BinaryIO']))
-            self.assertEqual(__name__, 'typing.io')
-            self.assertEqual(len(w), 1)
+        from typing.io import IO, TextIO, BinaryIO, __all__, __name__
+        self.assertIs(IO, typing.IO)
+        self.assertIs(TextIO, typing.TextIO)
+        self.assertIs(BinaryIO, typing.BinaryIO)
+        self.assertEqual(set(__all__), set(['IO', 'TextIO', 'BinaryIO']))
+        self.assertEqual(__name__, 'typing.io')
 
 
 class RETests(BaseTestCase):
@@ -4063,14 +4059,11 @@ class RETests(BaseTestCase):
         self.assertEqual(repr(Match[bytes]), 'typing.Match[bytes]')
 
     def test_re_submodule(self):
-        with warnings.catch_warnings(record=True) as w:
-            warnings.filterwarnings("default", category=DeprecationWarning)
-            from typing.re import Match, Pattern, __all__, __name__
-            self.assertIs(Match, typing.Match)
-            self.assertIs(Pattern, typing.Pattern)
-            self.assertEqual(set(__all__), set(['Match', 'Pattern']))
-            self.assertEqual(__name__, 'typing.re')
-            self.assertEqual(len(w), 1)
+        from typing.re import Match, Pattern, __all__, __name__
+        self.assertIs(Match, typing.Match)
+        self.assertIs(Pattern, typing.Pattern)
+        self.assertEqual(set(__all__), set(['Match', 'Pattern']))
+        self.assertEqual(__name__, 'typing.re')
 
     def test_cannot_subclass(self):
         with self.assertRaises(TypeError) as ex:

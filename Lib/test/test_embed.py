@@ -369,7 +369,6 @@ class InitConfigTests(EmbeddingTestsMixin, unittest.TestCase):
         'faulthandler': 0,
         'tracemalloc': 0,
         'import_time': 0,
-        'no_debug_ranges': 0,
         'show_ref_count': 0,
         'dump_refs': 0,
         'malloc_stats': 0,
@@ -799,7 +798,6 @@ class InitConfigTests(EmbeddingTestsMixin, unittest.TestCase):
             'hash_seed': 123,
             'tracemalloc': 2,
             'import_time': 1,
-            'no_debug_ranges': 1,
             'show_ref_count': 1,
             'malloc_stats': 1,
 
@@ -860,7 +858,6 @@ class InitConfigTests(EmbeddingTestsMixin, unittest.TestCase):
             'hash_seed': 42,
             'tracemalloc': 2,
             'import_time': 1,
-            'no_debug_ranges': 1,
             'malloc_stats': 1,
             'inspect': 1,
             'optimization_level': 2,
@@ -890,7 +887,6 @@ class InitConfigTests(EmbeddingTestsMixin, unittest.TestCase):
             'hash_seed': 42,
             'tracemalloc': 2,
             'import_time': 1,
-            'no_debug_ranges': 1,
             'malloc_stats': 1,
             'inspect': 1,
             'optimization_level': 2,
@@ -1494,25 +1490,6 @@ class MiscTests(EmbeddingTestsMixin, unittest.TestCase):
         # bpo-42882: Test that _PyUnicode_FromId() works
         # when Python is initialized multiples times.
         self.run_embedded_interpreter("test_unicode_id_init")
-
-    # See bpo-44133
-    @unittest.skipIf(os.name == 'nt',
-                     'Py_FrozenMain is not exported on Windows')
-    def test_frozenmain(self):
-        env = dict(os.environ)
-        env['PYTHONUNBUFFERED'] = '1'
-        out, err = self.run_embedded_interpreter("test_frozenmain", env=env)
-        executable = os.path.realpath('./argv0')
-        expected = textwrap.dedent(f"""
-            Frozen Hello World
-            sys.argv ['./argv0', '-E', 'arg1', 'arg2']
-            config program_name: ./argv0
-            config executable: {executable}
-            config use_environment: 1
-            config configure_c_stdio: 1
-            config buffered_stdio: 0
-        """).lstrip()
-        self.assertEqual(out, expected)
 
 
 class StdPrinterTests(EmbeddingTestsMixin, unittest.TestCase):

@@ -69,8 +69,7 @@ def extract_tb(tb, limit=None):
     trace.  The line is a string with leading and trailing
     whitespace stripped; if the source is not available it is None.
     """
-    return StackSummary._extract_from_extended_frame_gen(
-        _walk_tb_with_full_positions(tb), limit=limit)
+    return StackSummary.extract(walk_tb(tb), limit=limit)
 
 #
 # Exception formatting and output.
@@ -115,8 +114,11 @@ def print_exception(exc, /, value=_sentinel, tb=_sentinel, limit=None, \
     position of the error.
     """
     value, tb = _parse_value_tb(exc, value, tb)
+    if file is None:
+        file = sys.stderr
     te = TracebackException(type(value), value, tb, limit=limit, compact=True)
-    te.print(file=file, chain=chain)
+    for line in te.format(chain=chain):
+        print(line, file=file, end="")
 
 
 def format_exception(exc, /, value=_sentinel, tb=_sentinel, limit=None, \
@@ -252,12 +254,10 @@ class FrameSummary:
       mapping the name to the repr() of the variable.
     """
 
-    __slots__ = ('filename', 'lineno', 'end_lineno', 'colno', 'end_colno',
-                 'name', '_line', 'locals')
+    __slots__ = ('filename', 'lineno', 'name', '_line', 'locals')
 
     def __init__(self, filename, lineno, name, *, lookup_line=True,
-            locals=None, line=None,
-            end_lineno=None, colno=None, end_colno=None):
+            locals=None, line=None):
         """Construct a FrameSummary.
 
         :param lookup_line: If True, `linecache` is consulted for the source
@@ -274,9 +274,6 @@ class FrameSummary:
         if lookup_line:
             self.line
         self.locals = {k: repr(v) for k, v in locals.items()} if locals else None
-        self.end_lineno = end_lineno
-        self.colno = colno
-        self.end_colno = end_colno
 
     def __eq__(self, other):
         if isinstance(other, FrameSummary):
@@ -302,19 +299,12 @@ class FrameSummary:
         return 4
 
     @property
-    def _original_line(self):
-        # Returns the line as-is from the source, without modifying whitespace.
-        self.line
-        return self._line
-
-    @property
     def line(self):
         if self._line is None:
             if self.lineno is None:
                 return None
             self._line = linecache.getline(self.filename, self.lineno)
         return self._line.strip()
-
 
 def walk_stack(f):
     """Walk a stack yielding the frame and line number for each frame.
@@ -323,7 +313,7 @@ def walk_stack(f):
     current stack is used. Usually used with StackSummary.extract.
     """
     if f is None:
-        f = sys._getframe().f_back.f_back.f_back.f_back
+        f = sys._getframe().f_back.f_back
     while f is not None:
         yield f, f.f_lineno
         f = f.f_back
@@ -338,27 +328,6 @@ def walk_tb(tb):
     while tb is not None:
         yield tb.tb_frame, tb.tb_lineno
         tb = tb.tb_next
-
-
-def _walk_tb_with_full_positions(tb):
-    # Internal version of walk_tb that yields full code positions including
-    # end line and column information.
-    while tb is not None:
-        positions = _get_code_position(tb.tb_frame.f_code, tb.tb_lasti)
-        # Yield tb_lineno when co_positions does not have a line number to
-        # maintain behavior with walk_tb.
-        if positions[0] is None:
-            yield tb.tb_frame, (tb.tb_lineno, ) + positions[1:]
-        else:
-            yield tb.tb_frame, positions
-        tb = tb.tb_next
-
-
-def _get_code_position(code, instruction_index):
-    if instruction_index < 0:
-        return (None, None, None, None)
-    positions_gen = code.co_positions()
-    return next(itertools.islice(positions_gen, instruction_index // 2, None))
 
 
 _RECURSIVE_CUTOFF = 3 # Also hardcoded in traceback.c.
@@ -380,21 +349,6 @@ class StackSummary(list):
         :param capture_locals: If True, the local variables from each frame will
             be captured as object representations into the FrameSummary.
         """
-        def extended_frame_gen():
-            for f, lineno in frame_gen:
-                yield f, (lineno, None, None, None)
-
-        return klass._extract_from_extended_frame_gen(
-            extended_frame_gen(), limit=limit, lookup_lines=lookup_lines,
-            capture_locals=capture_locals)
-
-    @classmethod
-    def _extract_from_extended_frame_gen(klass, frame_gen, *, limit=None,
-            lookup_lines=True, capture_locals=False):
-        # Same as extract but operates on a frame generator that yields
-        # (frame, (lineno, end_lineno, colno, end_colno)) in the stack.
-        # Only lineno is required, the remaining fields can be empty if the
-        # information is not available.
         if limit is None:
             limit = getattr(sys, 'tracebacklimit', None)
             if limit is not None and limit < 0:
@@ -407,7 +361,7 @@ class StackSummary(list):
 
         result = klass()
         fnames = set()
-        for f, (lineno, end_lineno, colno, end_colno) in frame_gen:
+        for f, lineno in frame_gen:
             co = f.f_code
             filename = co.co_filename
             name = co.co_name
@@ -420,8 +374,7 @@ class StackSummary(list):
             else:
                 f_locals = None
             result.append(FrameSummary(
-                filename, lineno, name, lookup_line=False, locals=f_locals,
-                end_lineno=end_lineno, colno=colno, end_colno=end_colno))
+                filename, lineno, name, lookup_line=False, locals=f_locals))
         for filename in fnames:
             linecache.checkcache(filename)
         # If immediate lookup was desired, trigger lookups now.
@@ -488,17 +441,6 @@ class StackSummary(list):
                 frame.filename, frame.lineno, frame.name))
             if frame.line:
                 row.append('    {}\n'.format(frame.line.strip()))
-
-                stripped_characters = len(frame._original_line) - len(frame.line.lstrip())
-                if frame.end_lineno == frame.lineno and frame.end_colno != 0:
-                    colno = _byte_offset_to_character_offset(frame._original_line, frame.colno)
-                    end_colno = _byte_offset_to_character_offset(frame._original_line, frame.end_colno)
-
-                    row.append('    ')
-                    row.append(' ' * (colno - stripped_characters))
-                    row.append('^' * (end_colno - colno))
-                    row.append('\n')
-
             if frame.locals:
                 for name, value in sorted(frame.locals.items()):
                     row.append('    {name} = {value}\n'.format(name=name, value=value))
@@ -510,14 +452,6 @@ class StackSummary(list):
                 f'time{"s" if count > 1 else ""}]\n'
             )
         return result
-
-
-def _byte_offset_to_character_offset(str, offset):
-    as_utf8 = str.encode('utf-8')
-    if offset > len(as_utf8):
-        offset = len(as_utf8)
-
-    return len(as_utf8[:offset + 1].decode("utf-8"))
 
 
 class TracebackException:
@@ -561,9 +495,8 @@ class TracebackException:
         _seen.add(id(exc_value))
 
         # TODO: locals.
-        self.stack = StackSummary._extract_from_extended_frame_gen(
-            _walk_tb_with_full_positions(exc_traceback),
-            limit=limit, lookup_lines=lookup_lines,
+        self.stack = StackSummary.extract(
+            walk_tb(exc_traceback), limit=limit, lookup_lines=lookup_lines,
             capture_locals=capture_locals)
         self.exc_type = exc_type
         # Capture now to permit freeing resources: only complication is in the
@@ -740,10 +673,3 @@ class TracebackException:
                 yield 'Traceback (most recent call last):\n'
                 yield from exc.stack.format()
             yield from exc.format_exception_only()
-
-    def print(self, *, file=None, chain=True):
-        """Print the result of self.format(chain=chain) to 'file'."""
-        if file is None:
-            file = sys.stderr
-        for line in self.format(chain=chain):
-            print(line, file=file, end="")

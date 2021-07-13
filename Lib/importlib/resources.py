@@ -11,7 +11,8 @@ from io import BytesIO, TextIOWrapper
 from pathlib import Path
 from types import ModuleType
 from typing import ContextManager, Iterable, Union
-from typing import cast, BinaryIO, TextIO
+from typing import cast
+from typing.io import BinaryIO, TextIO
 from collections.abc import Sequence
 from functools import singledispatch
 

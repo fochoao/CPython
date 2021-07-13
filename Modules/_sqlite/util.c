@@ -24,8 +24,7 @@
 #include "module.h"
 #include "connection.h"
 
-int
-pysqlite_step(sqlite3_stmt *statement)
+int pysqlite_step(sqlite3_stmt* statement, pysqlite_Connection* connection)
 {
     int rc;
 
@@ -40,10 +39,8 @@ pysqlite_step(sqlite3_stmt *statement)
  * Checks the SQLite error code and sets the appropriate DB-API exception.
  * Returns the error code (0 means no error occurred).
  */
-int
-_pysqlite_seterror(sqlite3 *db)
+int _pysqlite_seterror(sqlite3* db, sqlite3_stmt* st)
 {
-    pysqlite_state *state = pysqlite_get_state(NULL);
     int errorcode = sqlite3_errcode(db);
 
     switch (errorcode)
@@ -53,7 +50,7 @@ _pysqlite_seterror(sqlite3 *db)
             break;
         case SQLITE_INTERNAL:
         case SQLITE_NOTFOUND:
-            PyErr_SetString(state->InternalError, sqlite3_errmsg(db));
+            PyErr_SetString(pysqlite_InternalError, sqlite3_errmsg(db));
             break;
         case SQLITE_NOMEM:
             (void)PyErr_NoMemory();
@@ -74,7 +71,7 @@ _pysqlite_seterror(sqlite3 *db)
             PyErr_SetString(pysqlite_OperationalError, sqlite3_errmsg(db));
             break;
         case SQLITE_CORRUPT:
-            PyErr_SetString(state->DatabaseError, sqlite3_errmsg(db));
+            PyErr_SetString(pysqlite_DatabaseError, sqlite3_errmsg(db));
             break;
         case SQLITE_TOOBIG:
             PyErr_SetString(pysqlite_DataError, sqlite3_errmsg(db));
@@ -87,7 +84,7 @@ _pysqlite_seterror(sqlite3 *db)
             PyErr_SetString(pysqlite_ProgrammingError, sqlite3_errmsg(db));
             break;
         default:
-            PyErr_SetString(state->DatabaseError, sqlite3_errmsg(db));
+            PyErr_SetString(pysqlite_DatabaseError, sqlite3_errmsg(db));
             break;
     }
 

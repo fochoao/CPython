@@ -25,6 +25,13 @@ get_tuple_state(void)
 #endif
 
 
+static inline void
+tuple_gc_track(PyTupleObject *op)
+{
+    _PyObject_GC_TRACK(op);
+}
+
+
 /* Print summary info about the state of the optimized allocator */
 void
 _PyTuple_DebugMallocStats(FILE *out)
@@ -41,12 +48,10 @@ _PyTuple_DebugMallocStats(FILE *out)
 #endif
 }
 
-/* Allocate an uninitialized tuple object. Before making it public, following
+/* Allocate an uninitialized tuple object. Before making it public following
    steps must be done:
-
-   - Initialize its items.
-   - Call _PyObject_GC_TRACK() on it.
-
+   - initialize its items
+   - call tuple_gc_track() on it
    Because the empty tuple is always reused and it's already tracked by GC,
    this function must not be called with size == 0 (unless from PyTuple_New()
    which wraps this function).
@@ -156,7 +161,7 @@ PyTuple_New(Py_ssize_t size)
     for (Py_ssize_t i = 0; i < size; i++) {
         op->ob_item[i] = NULL;
     }
-    _PyObject_GC_TRACK(op);
+    tuple_gc_track(op);
     return (PyObject *) op;
 }
 
@@ -252,7 +257,7 @@ PyTuple_Pack(Py_ssize_t n, ...)
         items[i] = o;
     }
     va_end(vargs);
-    _PyObject_GC_TRACK(result);
+    tuple_gc_track(result);
     return (PyObject *)result;
 }
 
@@ -468,7 +473,7 @@ _PyTuple_FromArray(PyObject *const *src, Py_ssize_t n)
         Py_INCREF(item);
         dst[i] = item;
     }
-    _PyObject_GC_TRACK(tuple);
+    tuple_gc_track(tuple);
     return (PyObject *)tuple;
 }
 
@@ -546,7 +551,7 @@ tupleconcat(PyTupleObject *a, PyObject *bb)
         Py_INCREF(v);
         dest[i] = v;
     }
-    _PyObject_GC_TRACK(np);
+    tuple_gc_track(np);
     return (PyObject *)np;
 }
 
@@ -583,7 +588,7 @@ tuplerepeat(PyTupleObject *a, Py_ssize_t n)
             p++;
         }
     }
-    _PyObject_GC_TRACK(np);
+    tuple_gc_track(np);
     return (PyObject *) np;
 }
 
@@ -778,9 +783,6 @@ tuple_subtype_new(PyTypeObject *type, PyObject *iterable)
     Py_ssize_t i, n;
 
     assert(PyType_IsSubtype(type, &PyTuple_Type));
-    // tuple subclasses must implement the GC protocol
-    assert(_PyType_IS_GC(type));
-
     tmp = tuple_new_impl(&PyTuple_Type, iterable);
     if (tmp == NULL)
         return NULL;
@@ -796,11 +798,6 @@ tuple_subtype_new(PyTypeObject *type, PyObject *iterable)
         PyTuple_SET_ITEM(newobj, i, item);
     }
     Py_DECREF(tmp);
-
-    // Don't track if a subclass tp_alloc is PyType_GenericAlloc()
-    if (!_PyObject_GC_IS_TRACKED(newobj)) {
-        _PyObject_GC_TRACK(newobj);
-    }
     return newobj;
 }
 
@@ -860,7 +857,7 @@ tuplesubscript(PyTupleObject* self, PyObject* item)
                 dest[i] = it;
             }
 
-            _PyObject_GC_TRACK(result);
+            tuple_gc_track(result);
             return (PyObject *)result;
         }
     }

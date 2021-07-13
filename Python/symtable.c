@@ -391,7 +391,7 @@ PySymtable_Lookup(struct symtable *st, void *key)
     return (PySTEntryObject *)v;
 }
 
-long
+static long
 _PyST_GetSymbol(PySTEntryObject *ste, PyObject *name)
 {
     PyObject *v = PyDict_GetItemWithError(ste->ste_symbols, name);

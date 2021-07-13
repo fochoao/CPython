@@ -267,9 +267,8 @@ class EnvBuilder:
                         os.path.normcase(f).startswith(('python', 'vcruntime'))
                     ]
             else:
-                suffixes = {'python.exe', 'python_d.exe', 'pythonw.exe', 'pythonw_d.exe'}
-                base_exe = os.path.basename(context.env_exe)
-                suffixes.add(base_exe)
+                suffixes = ['python.exe', 'python_d.exe', 'pythonw.exe',
+                            'pythonw_d.exe']
 
             for suffix in suffixes:
                 src = os.path.join(dirname, suffix)

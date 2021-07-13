@@ -987,17 +987,6 @@ encodings
 :func:`encodings.normalize_encoding` now ignores non-ASCII characters.
 (Contributed by Hai Shi in :issue:`39337`.)
 
-enum
-----
-
-:class:`Enum` :func:`__repr__` now returns ``enum_name.member_name`` and
-:func:`__str__` now returns ``member_name``.  Stdlib enums available as
-module constants have a :func:`repr` of ``module_name.member_name``.
-(Contributed by Ethan Furman in :issue:`40066`.)
-
-Add :class:`enum.StrEnum` for enums where all members are strings.
-(Contributed by Ethan Furman in :issue:`41816`.)
-
 fileinput
 ---------
 
@@ -1392,6 +1381,13 @@ functions internally.  For more details, please see their respective
 documentation.
 (Contributed by Adam Goldschmidt, Senthil Kumaran and Ken Jin in :issue:`42967`.)
 
+The presence of newline or tab characters in parts of a URL allows for some
+forms of attacks. Following the WHATWG specification that updates :rfc:`3986`,
+ASCII newline ``\n``, ``\r`` and tab ``\t`` characters are stripped from the
+URL by the parser in :mod:`urllib.parse` preventing such attacks. The removal
+characters are controlled by a new module level variable
+``urllib.parse._UNSAFE_URL_BYTES_TO_REMOVE``. (See :issue:`43882`)
+
 xml
 ---
 
@@ -1480,7 +1476,7 @@ Deprecated
   this release, a deprecation warning is raised if the numeric literal is
   immediately followed by one of keywords :keyword:`and`, :keyword:`else`,
   :keyword:`for`, :keyword:`if`, :keyword:`in`, :keyword:`is` and :keyword:`or`.
-  In future releases it will be changed to syntax warning, and finally to
+  If future releases it will be changed to syntax warning, and finally to
   syntax error.
   (Contributed by Serhiy Storchaka in :issue:`43833`).
 

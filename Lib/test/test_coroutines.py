@@ -1212,7 +1212,7 @@ class CoroutineTest(unittest.TestCase):
             async with CM():
                 body_executed = True
 
-        with self.assertRaisesRegex(TypeError, 'asynchronous context manager.*__aexit__'):
+        with self.assertRaisesRegex(AttributeError, '__aexit__'):
             run_async(foo())
         self.assertIs(body_executed, False)
 
@@ -1228,7 +1228,7 @@ class CoroutineTest(unittest.TestCase):
             async with CM():
                 body_executed = True
 
-        with self.assertRaisesRegex(TypeError, 'asynchronous context manager'):
+        with self.assertRaisesRegex(AttributeError, '__aenter__'):
             run_async(foo())
         self.assertIs(body_executed, False)
 
@@ -1243,7 +1243,7 @@ class CoroutineTest(unittest.TestCase):
             async with CM():
                 body_executed = True
 
-        with self.assertRaisesRegex(TypeError, 'asynchronous context manager'):
+        with self.assertRaisesRegex(AttributeError, '__aenter__'):
             run_async(foo())
         self.assertIs(body_executed, False)
 

@@ -1010,7 +1010,13 @@ class Thread:
             except:
                 self._invoke_excepthook(self)
         finally:
-            self._delete()
+            with _active_limbo_lock:
+                try:
+                    # We don't call self._delete() because it also
+                    # grabs _active_limbo_lock.
+                    del _active[get_ident()]
+                except:
+                    pass
 
     def _stop(self):
         # After calling ._stop(), .is_alive() returns False and .join() returns

@@ -224,14 +224,14 @@ class BaseEventLoopTests(test_utils.TestCase):
         self.loop.set_default_executor(executor)
         self.assertIs(executor, self.loop._default_executor)
 
-    def test_set_default_executor_error(self):
+    def test_set_default_executor_deprecation_warnings(self):
         executor = mock.Mock()
 
-        msg = 'executor must be ThreadPoolExecutor instance'
-        with self.assertRaisesRegex(TypeError, msg):
+        with self.assertWarns(DeprecationWarning):
             self.loop.set_default_executor(executor)
 
-        self.assertIsNone(self.loop._default_executor)
+        # Avoid cleaning up the executor mock
+        self.loop._default_executor = None
 
     def test_call_soon(self):
         def cb():
@@ -1884,8 +1884,10 @@ class BaseEventLoopWithSelectorTests(test_utils.TestCase):
             MyProto, sock, None, None, mock.ANY, mock.ANY)
 
     def test_call_coroutine(self):
-        async def simple_coroutine():
-            pass
+        with self.assertWarns(DeprecationWarning):
+            @asyncio.coroutine
+            def simple_coroutine():
+                pass
 
         self.loop.set_debug(True)
         coro_func = simple_coroutine

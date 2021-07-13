@@ -1132,12 +1132,16 @@ Executing code in thread or process pools
 .. method:: loop.set_default_executor(executor)
 
    Set *executor* as the default executor used by :meth:`run_in_executor`.
-   *executor* must be an instance of
+   *executor* should be an instance of
    :class:`~concurrent.futures.ThreadPoolExecutor`.
 
-   .. versionchanged:: 3.11
-      *executor* must be an instance of
-      :class:`~concurrent.futures.ThreadPoolExecutor`.
+   .. deprecated:: 3.8
+      Using an executor that is not an instance of
+      :class:`~concurrent.futures.ThreadPoolExecutor` is deprecated and
+      will trigger an error in Python 3.9.
+
+   *executor* must be an instance of
+   :class:`concurrent.futures.ThreadPoolExecutor`.
 
 
 Error Handling API
@@ -1436,7 +1440,7 @@ Do not instantiate the class directly.
       Start accepting connections.
 
       This method is idempotent, so it can be called when
-      the server is already serving.
+      the server is already being serving.
 
       The *start_serving* keyword-only parameter to
       :meth:`loop.create_server` and
