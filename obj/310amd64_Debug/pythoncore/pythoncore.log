@@ -1,16 +1,7 @@
 ﻿  Killing any running python_d.exe instances...
   Generated sources are up to date
   Getting build info from git
-  fatal: not a git repository (or any of the parent directories): .git
-C:\cpython\PCbuild\pythoncore.vcxproj(530,5): warning MSB3073: The command "git name-rev --name-only HEAD > "C:\cpython\PCbuild\obj\310amd64_Debug\pythoncore\gitbranch.txt"" exited with code 128.
-C:\cpython\PCbuild\pythoncore.vcxproj(530,5): warning MSB4181: The "Exec" task returned false but did not log an error.
-  fatal: not a git repository (or any of the parent directories): .git
-C:\cpython\PCbuild\pythoncore.vcxproj(531,5): warning MSB3073: The command "git rev-parse --short HEAD > "C:\cpython\PCbuild\obj\310amd64_Debug\pythoncore\gitversion.txt"" exited with code 128.
-C:\cpython\PCbuild\pythoncore.vcxproj(531,5): warning MSB4181: The "Exec" task returned false but did not log an error.
-  fatal: not a git repository (or any of the parent directories): .git
-C:\cpython\PCbuild\pythoncore.vcxproj(532,5): warning MSB3073: The command "git describe --all --always --dirty > "C:\cpython\PCbuild\obj\310amd64_Debug\pythoncore\gittag.txt"" exited with code 128.
-C:\cpython\PCbuild\pythoncore.vcxproj(532,5): warning MSB4181: The "Exec" task returned false but did not log an error.
-  Building : 
+  Building heads/master-dirty:e252ff3e1 master
   _abc.c
   _bisectmodule.c
   blake2module.c
