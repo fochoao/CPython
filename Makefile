@@ -123,14 +123,14 @@ CFLAGS_ALIASING=
 
 
 # Machine-dependent subdirectories
-MACHDEP=	mingw64_nt-10.0-219963
+MACHDEP=	msys_nt-10.0-220003
 
 # Multiarch directory (may be empty)
 MULTIARCH=	
 MULTIARCH_CPPFLAGS = 
 
 # Install prefix for architecture-independent files
-prefix=		/ucrt64
+prefix=		/usr
 
 # Install prefix for architecture-dependent files
 exec_prefix=	${prefix}
@@ -203,9 +203,9 @@ RUNSHARED=
 ENSUREPIP=      upgrade
 
 # OpenSSL options for setup.py so sysconfig can pick up AC_SUBST() vars.
-OPENSSL_INCLUDES=-ID:/msys64/ucrt64/include 
+OPENSSL_INCLUDES=
 OPENSSL_LIBS=-lssl -lcrypto 
-OPENSSL_LDFLAGS=-LD:/msys64/ucrt64/lib 
+OPENSSL_LDFLAGS=
 OPENSSL_RPATH=
 
 # Default zoneinfo.TZPATH. Added here to expose it in sysconfig.get_config_var
@@ -218,7 +218,7 @@ EXEMODE=	755
 FILEMODE=	644
 
 # configure script arguments
-CONFIG_ARGS=	 'PKG_CONFIG_PATH=/ucrt64/lib/pkgconfig:/ucrt64/share/pkgconfig'
+CONFIG_ARGS=	 'PKG_CONFIG_PATH=/usr/lib/pkgconfig:/usr/share/pkgconfig:/lib/pkgconfig'
 
 
 # Subdirectories with code
@@ -246,14 +246,14 @@ PY_ENABLE_SHARED=	0
 STATIC_LIBPYTHON=	1
 
 
-LIBS=		-lintl  -lm
+LIBS=		-lcrypt -lintl -ldl  -lm
 LIBM=		-lm
 LIBC=		
 SYSLIBS=	$(LIBM) $(LIBC)
 SHLIBS=		$(LIBS)
 
 DLINCLDIR=	.
-DYNLOADFILE=	dynload_stub.o
+DYNLOADFILE=	dynload_shlib.o
 MACHDEP_OBJS=	
 LIBOBJDIR=	Python/
 LIBOBJS=	
@@ -265,8 +265,8 @@ PYTHON_FOR_REGEN?=python3
 UPDATE_FILE=$(PYTHON_FOR_REGEN) $(srcdir)/Tools/scripts/update_file.py
 PYTHON_FOR_BUILD=./$(BUILDPYTHON) -E
 _PYTHON_HOST_PLATFORM=
-BUILD_GNU_TYPE=	x86_64-w64-mingw32
-HOST_GNU_TYPE=	x86_64-w64-mingw32
+BUILD_GNU_TYPE=	x86_64-pc-msys
+HOST_GNU_TYPE=	x86_64-pc-msys
 
 # Tcl and Tk config info from --with-tcltk-includes and -libs options
 TCLTK_INCLUDES=	
@@ -319,7 +319,7 @@ IO_OBJS=	\
 
 ##########################################################################
 
-LIBFFI_INCLUDEDIR=	D:/msys64/ucrt64/include
+LIBFFI_INCLUDEDIR=	
 
 ##########################################################################
 # Parser
