@@ -1,0 +1,6 @@
+﻿  _testcapimodule.c
+  _testcapimodule.obj : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     Creating library C:\cpython\PCbuild\win32\instrumented\_testcapi.lib and object C:\cpython\PCbuild\win32\instrumented\_testcapi.exp
+  Generating code
+  Finished generating code
+  _testcapi.vcxproj -> C:\cpython\PCbuild\win32\instrumented\_testcapi.pyd

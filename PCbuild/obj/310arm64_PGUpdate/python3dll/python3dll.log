@@ -1,0 +1,6 @@
+﻿  python3dll.c
+  python3dll.obj : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     Creating library C:\cpython\PCbuild\arm64\python3.lib and object C:\cpython\PCbuild\arm64\python3.exp
+  Generating code
+  Finished generating code
+  python3dll.vcxproj -> C:\cpython\PCbuild\arm64\python3.dll

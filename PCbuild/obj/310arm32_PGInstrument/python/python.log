@@ -1,0 +1,8 @@
+﻿  python.c
+  Generating code
+  Finished generating code
+  python.vcxproj -> C:\cpython\PCbuild\arm32\instrumented\python.exe
+C:\cpython\PCbuild\regen.targets(110,5): warning : License file C:\cpython\externals\tcltk-8.6.11.0\arm32\tcllicense.terms is missing
+C:\cpython\PCbuild\regen.targets(110,5): warning : License file C:\cpython\externals\tcltk-8.6.11.0\arm32\tklicense.terms is missing
+C:\cpython\PCbuild\regen.targets(110,5): warning : License file C:\cpython\externals\tcltk-8.6.11.0\arm32\tixlicense.terms is missing
+  Wrote C:\cpython\PCbuild\arm32\instrumented\LICENSE.txt

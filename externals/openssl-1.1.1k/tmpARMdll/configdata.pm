@@ -1,4 +1,4 @@
-#! D:\Strawberry\perl\bin\perl.exe
+#! C:\Strawberry\perl\bin\perl.exe
 
 package configdata;
 
@@ -20,13 +20,13 @@ our %config = (
   CPPFLAGS => [  ],
   CPPINCLUDES => [  ],
   CXXFLAGS => [  ],
-  HASHBANGPERL => "D:\\Strawberry\\perl\\bin\\perl.exe",
+  HASHBANGPERL => "C:\\Strawberry\\perl\\bin\\perl.exe",
   LD => "link",
   LDFLAGS => [ "/nologo /debug" ],
   LDLIBS => [  ],
   MT => "mt",
   MTFLAGS => [ "-nologo" ],
-  PERL => "D:\\Strawberry\\perl\\bin\\perl.exe",
+  PERL => "C:\\Strawberry\\perl\\bin\\perl.exe",
   RANLIB => "ranlib",
   RC => "rc",
   RCFLAGS => [  ],
@@ -64,7 +64,7 @@ our %config = (
   openssldir => "",
   options => " no-afalgeng no-asan no-asm no-buildtest-c++ no-crypto-mdebug no-crypto-mdebug-backtrace no-devcryptoeng no-ec_nistp_64_gcc_128 no-egd no-external-tests no-fuzz-afl no-fuzz-libfuzzer no-heartbeats no-md2 no-msan no-rc5 no-sctp no-ssl-trace no-ssl3 no-ssl3-method no-ubsan no-unit-test no-weak-ssl-ciphers no-zlib no-zlib-dynamic",
   perl_archname => "MSWin32-x64-multi-thread",
-  perl_cmd => "D:\\Strawberry\\perl\\bin\\perl.exe",
+  perl_cmd => "C:\\Strawberry\\perl\\bin\\perl.exe",
   perl_version => "5.32.1",
   perlargv => [ "VC-WIN32-ARM", "no-asm" ],
   perlenv => {
@@ -89,7 +89,7 @@ our %config = (
       "MT" => undef,
       "MTFLAGS" => undef,
       "OPENSSL_LOCAL_CONFIG_DIR" => undef,
-      "PERL" => "D:\\Strawberry\\perl\\bin\\perl.exe",
+      "PERL" => "C:\\Strawberry\\perl\\bin\\perl.exe",
       "RANLIB" => undef,
       "RC" => undef,
       "RCFLAGS" => undef,
@@ -129,7 +129,7 @@ our %target = (
   LDFLAGS => "/nologo /debug",
   MT => "mt",
   MTFLAGS => "-nologo",
-  RANLIB => "CODE(0x25a52a8)",
+  RANLIB => "CODE(0x26f3b58)",
   RC => "rc",
   _conf_fname_int => [ "C:\\cpython\\externals\\openssl-1.1.1k\\Configurations\\00-base-templates.conf", "C:\\cpython\\externals\\openssl-1.1.1k\\Configurations\\00-base-templates.conf", "C:\\cpython\\externals\\openssl-1.1.1k\\Configurations\\10-main.conf", "C:\\cpython\\externals\\openssl-1.1.1k\\Configurations\\10-main.conf", "C:\\cpython\\externals\\openssl-1.1.1k\\Configurations\\50-win-onecore.conf", "C:\\cpython\\externals\\openssl-1.1.1k\\Configurations\\shared-info.pl" ],
   aes_asm_src => "aes_core.c aes_cbc.c",
@@ -3188,6 +3188,8 @@ our %unified_info = (
                 {
                     "deps" =>
                         [
+                            "ssl\\packet.o",
+                            "ssl\\tls13_enc.o",
                             "ssl\\bio_ssl.o",
                             "ssl\\d1_lib.o",
                             "ssl\\d1_msg.o",
@@ -3217,8 +3219,6 @@ our %unified_info = (
                             "ssl\\t1_trce.o",
                             "ssl\\tls13_enc.o",
                             "ssl\\tls_srp.o",
-                            "ssl\\packet.o",
-                            "ssl\\tls13_enc.o",
                         ],
                     "products" =>
                         {

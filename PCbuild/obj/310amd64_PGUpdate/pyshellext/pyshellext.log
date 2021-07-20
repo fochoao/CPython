@@ -1,0 +1,6 @@
+﻿  pyshellext.cpp
+  pyshellext.obj : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     Creating library C:\cpython\PCbuild\amd64\pyshellext.lib and object C:\cpython\PCbuild\amd64\pyshellext.exp
+  Generating code
+  Finished generating code
+  pyshellext.vcxproj -> C:\cpython\PCbuild\amd64\pyshellext.dll

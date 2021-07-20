@@ -1,0 +1,5 @@
+﻿  _tkinter.c
+  tkappinit.c
+  Generating Code...
+     Creating library C:\cpython\PCbuild\amd64\_tkinter_d.lib and object C:\cpython\PCbuild\amd64\_tkinter_d.exp
+  _tkinter.vcxproj -> C:\cpython\PCbuild\amd64\_tkinter_d.pyd

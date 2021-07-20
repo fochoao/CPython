@@ -1,0 +1,9 @@
+﻿  python.c
+  Generating code
+  Finished generating code
+  python.vcxproj -> C:\cpython\PCbuild\amd64\python.exe
+  C:\WINDOWS\System32\ucrtbase.dll is version 10.0.22000.1
+C:\cpython\PCbuild\regen.targets(110,5): warning : License file C:\cpython\externals\tcltk-8.6.11.0\amd64\tcllicense.terms is missing
+C:\cpython\PCbuild\regen.targets(110,5): warning : License file C:\cpython\externals\tcltk-8.6.11.0\amd64\tklicense.terms is missing
+C:\cpython\PCbuild\regen.targets(110,5): warning : License file C:\cpython\externals\tcltk-8.6.11.0\amd64\tixlicense.terms is missing
+  Wrote C:\cpython\PCbuild\amd64\LICENSE.txt

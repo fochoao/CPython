@@ -1,0 +1,7 @@
+﻿  pyexpat.c
+  xmlparse.c
+  xmlrole.c
+  xmltok.c
+  Generating Code...
+     Creating library C:\cpython\PCbuild\arm64\pyexpat_d.lib and object C:\cpython\PCbuild\arm64\pyexpat_d.exp
+  pyexpat.vcxproj -> C:\cpython\PCbuild\arm64\pyexpat_d.pyd

@@ -1,0 +1,9 @@
+﻿  _ctypes.c
+  callbacks.c
+  callproc.c
+  cfield.c
+  malloc_closure.c
+  stgdict.c
+  Generating Code...
+     Creating library C:\cpython\PCbuild\arm64\_ctypes_d.lib and object C:\cpython\PCbuild\arm64\_ctypes_d.exp
+  _ctypes.vcxproj -> C:\cpython\PCbuild\arm64\_ctypes_d.pyd

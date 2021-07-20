@@ -1,0 +1,6 @@
+﻿  _testbuffer.c
+  _testbuffer.obj : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     Creating library C:\cpython\PCbuild\arm64\instrumented\_testbuffer.lib and object C:\cpython\PCbuild\arm64\instrumented\_testbuffer.exp
+  Generating code
+  Finished generating code
+  _testbuffer.vcxproj -> C:\cpython\PCbuild\arm64\instrumented\_testbuffer.pyd

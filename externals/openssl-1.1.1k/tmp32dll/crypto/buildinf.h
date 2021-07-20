@@ -11,7 +11,7 @@
  */
 
 #define PLATFORM "platform: VC-WIN32"
-#define DATE "built on: Sun Jun 27 05:05:20 2021 UTC"
+#define DATE "built on: Tue Jul 20 01:17:56 2021 UTC"
 
 /*
  * Generate compiler_flags as an array of individual characters. This is a
