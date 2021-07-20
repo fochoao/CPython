@@ -19,3 +19,4 @@
   Generating code
   Finished generating code
   _decimal.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_decimal.pyd
+  _decimal.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_decimal.pdb (Full PDB)

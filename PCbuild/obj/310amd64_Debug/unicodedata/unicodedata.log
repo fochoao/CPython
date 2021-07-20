@@ -1,3 +1,4 @@
 ﻿  unicodedata.c
      Creating library C:\cpython\PCbuild\amd64\unicodedata_d.lib and object C:\cpython\PCbuild\amd64\unicodedata_d.exp
   unicodedata.vcxproj -> C:\cpython\PCbuild\amd64\unicodedata_d.pyd
+  unicodedata.vcxproj -> C:\cpython\PCbuild\amd64\unicodedata_d.pdb (Full PDB)

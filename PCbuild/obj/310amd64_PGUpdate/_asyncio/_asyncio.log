@@ -1,1 +1,9 @@
-﻿
+﻿  _asynciomodule.c
+PGOMGR : warning PG0188: No .PGC files matching 'C:\cpython\PCbuild\amd64\_asyncio!*.pgc' were found.
+    Reading PGD file 1: C:\cpython\PCbuild\amd64\_asyncio.pgd
+C:\cpython\PCbuild\amd64\_asyncio.pgd : warning C4961: No profile data was merged into 'C:\cpython\PCbuild\amd64\_asyncio.pgd', profile-guided optimizations disabled
+     Creating library C:\cpython\PCbuild\amd64\_asyncio.lib and object C:\cpython\PCbuild\amd64\_asyncio.exp
+  Generating code
+  Finished generating code
+  _asyncio.vcxproj -> C:\cpython\PCbuild\amd64\_asyncio.pyd
+  _asyncio.vcxproj -> C:\cpython\PCbuild\amd64\_asyncio.pdb (Full PDB)

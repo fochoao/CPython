@@ -5,3 +5,4 @@
   Generating Code...
      Creating library C:\cpython\PCbuild\amd64\pyexpat_d.lib and object C:\cpython\PCbuild\amd64\pyexpat_d.exp
   pyexpat.vcxproj -> C:\cpython\PCbuild\amd64\pyexpat_d.pyd
+  pyexpat.vcxproj -> C:\cpython\PCbuild\amd64\pyexpat_d.pdb (Full PDB)

@@ -3,3 +3,4 @@
   Generating code
   Finished generating code
   sqlite3.vcxproj -> C:\cpython\PCbuild\amd64\sqlite3.dll
+  sqlite3.vcxproj -> C:\cpython\PCbuild\amd64\sqlite3.pdb (Full PDB)

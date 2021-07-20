@@ -4,3 +4,4 @@
   Generating code
   Finished generating code
   _multiprocessing.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_multiprocessing.pyd
+  _multiprocessing.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_multiprocessing.pdb (Full PDB)

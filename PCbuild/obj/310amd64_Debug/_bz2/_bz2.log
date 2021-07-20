@@ -9,3 +9,4 @@
   Generating Code...
      Creating library C:\cpython\PCbuild\amd64\_bz2_d.lib and object C:\cpython\PCbuild\amd64\_bz2_d.exp
   _bz2.vcxproj -> C:\cpython\PCbuild\amd64\_bz2_d.pyd
+  _bz2.vcxproj -> C:\cpython\PCbuild\amd64\_bz2_d.pdb (Full PDB)

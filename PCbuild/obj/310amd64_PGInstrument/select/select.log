@@ -3,3 +3,4 @@
   Generating code
   Finished generating code
   select.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\select.pyd
+  select.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\select.pdb (Full PDB)

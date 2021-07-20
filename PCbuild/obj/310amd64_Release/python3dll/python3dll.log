@@ -3,3 +3,4 @@
   Generating code
   Finished generating code
   python3dll.vcxproj -> C:\cpython\PCbuild\amd64\python3.dll
+  python3dll.vcxproj -> C:\cpython\PCbuild\amd64\python3.pdb (Full PDB)

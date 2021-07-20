@@ -5,3 +5,4 @@
   Generating Code...
      Creating library C:\cpython\PCbuild\amd64\_elementtree_d.lib and object C:\cpython\PCbuild\amd64\_elementtree_d.exp
   _elementtree.vcxproj -> C:\cpython\PCbuild\amd64\_elementtree_d.pyd
+  _elementtree.vcxproj -> C:\cpython\PCbuild\amd64\_elementtree_d.pdb (Full PDB)

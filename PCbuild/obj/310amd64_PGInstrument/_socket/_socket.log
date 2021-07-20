@@ -3,3 +3,4 @@
   Generating code
   Finished generating code
   _socket.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_socket.pyd
+  _socket.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_socket.pdb (Full PDB)

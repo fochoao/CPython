@@ -1,3 +1,4 @@
 ﻿  _ctypes_test.c
      Creating library C:\cpython\PCbuild\amd64\_ctypes_test_d.lib and object C:\cpython\PCbuild\amd64\_ctypes_test_d.exp
   _ctypes_test.vcxproj -> C:\cpython\PCbuild\amd64\_ctypes_test_d.pyd
+  _ctypes_test.vcxproj -> C:\cpython\PCbuild\amd64\_ctypes_test_d.pdb (Full PDB)

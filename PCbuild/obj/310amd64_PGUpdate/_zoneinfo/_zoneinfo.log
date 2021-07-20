@@ -1,1 +1,9 @@
-﻿
+﻿  _zoneinfo.c
+PGOMGR : warning PG0188: No .PGC files matching 'C:\cpython\PCbuild\amd64\_zoneinfo!*.pgc' were found.
+    Reading PGD file 1: C:\cpython\PCbuild\amd64\_zoneinfo.pgd
+C:\cpython\PCbuild\amd64\_zoneinfo.pgd : warning C4961: No profile data was merged into 'C:\cpython\PCbuild\amd64\_zoneinfo.pgd', profile-guided optimizations disabled
+     Creating library C:\cpython\PCbuild\amd64\_zoneinfo.lib and object C:\cpython\PCbuild\amd64\_zoneinfo.exp
+  Generating code
+  Finished generating code
+  _zoneinfo.vcxproj -> C:\cpython\PCbuild\amd64\_zoneinfo.pyd
+  _zoneinfo.vcxproj -> C:\cpython\PCbuild\amd64\_zoneinfo.pdb (Full PDB)

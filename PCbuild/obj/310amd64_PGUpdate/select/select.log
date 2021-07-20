@@ -1,1 +1,9 @@
-﻿
+﻿  selectmodule.c
+PGOMGR : warning PG0188: No .PGC files matching 'C:\cpython\PCbuild\amd64\select!*.pgc' were found.
+    Reading PGD file 1: C:\cpython\PCbuild\amd64\select.pgd
+C:\cpython\PCbuild\amd64\select.pgd : warning C4961: No profile data was merged into 'C:\cpython\PCbuild\amd64\select.pgd', profile-guided optimizations disabled
+     Creating library C:\cpython\PCbuild\amd64\select.lib and object C:\cpython\PCbuild\amd64\select.exp
+  Generating code
+  Finished generating code
+  select.vcxproj -> C:\cpython\PCbuild\amd64\select.pyd
+  select.vcxproj -> C:\cpython\PCbuild\amd64\select.pdb (Full PDB)

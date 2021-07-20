@@ -1,3 +1,4 @@
 ﻿  _lzmamodule.c
      Creating library C:\cpython\PCbuild\amd64\_lzma_d.lib and object C:\cpython\PCbuild\amd64\_lzma_d.exp
   _lzma.vcxproj -> C:\cpython\PCbuild\amd64\_lzma_d.pyd
+  _lzma.vcxproj -> C:\cpython\PCbuild\amd64\_lzma_d.pdb (Full PDB)

@@ -4,3 +4,4 @@
   Generating code
   Finished generating code
   _testinternalcapi.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_testinternalcapi.pyd
+  _testinternalcapi.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_testinternalcapi.pdb (Full PDB)

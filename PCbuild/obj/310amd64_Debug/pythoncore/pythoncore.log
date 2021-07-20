@@ -1,7 +1,7 @@
 ﻿  Killing any running python_d.exe instances...
   Generated sources are up to date
   Getting build info from git
-  Building tags/CPython-3.11.0-Beta4-x64-dirty:4ecc687ed tags/CPython-3.11.0-Beta4-x64
+  Building heads/master-dirty:b9200650b master
   _abc.c
   _bisectmodule.c
   blake2module.c
@@ -215,3 +215,4 @@
   getbuildinfo.c
      Creating library C:\cpython\PCbuild\amd64\python310_d.lib and object C:\cpython\PCbuild\amd64\python310_d.exp
   pythoncore.vcxproj -> C:\cpython\PCbuild\amd64\python310_d.dll
+  pythoncore.vcxproj -> C:\cpython\PCbuild\amd64\python310_d.pdb (Full PDB)

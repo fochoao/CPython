@@ -1,3 +1,4 @@
 ﻿  _uuidmodule.c
      Creating library C:\cpython\PCbuild\amd64\_uuid_d.lib and object C:\cpython\PCbuild\amd64\_uuid_d.exp
   _uuid.vcxproj -> C:\cpython\PCbuild\amd64\_uuid_d.pyd
+  _uuid.vcxproj -> C:\cpython\PCbuild\amd64\_uuid_d.pdb (Full PDB)

@@ -1,7 +1,7 @@
 ﻿  Killing any running python.exe instances...
   Generated sources are up to date
   Getting build info from git
-  Building tags/CPython-3.11.0-Beta4-x64-dirty:4ecc687ed tags/CPython-3.11.0-Beta4-x64
+  Building heads/master-dirty:b9200650b master
   _abc.c
   _bisectmodule.c
   blake2module.c
@@ -207,3 +207,4 @@
   Generating code
   Finished generating code
   pythoncore.vcxproj -> C:\cpython\PCbuild\amd64\python310.dll
+  pythoncore.vcxproj -> C:\cpython\PCbuild\amd64\python310.pdb (Full PDB)

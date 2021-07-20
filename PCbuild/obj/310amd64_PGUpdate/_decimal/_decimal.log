@@ -1,2 +1,25 @@
 ﻿  Performing Custom Build Tools
    Assembling: C:\cpython\Modules\_decimal\libmpdec\vcdiv64.asm
+  _decimal.c
+  basearith.c
+  constants.c
+  context.c
+  convolute.c
+  crt.c
+  difradix2.c
+  fnt.c
+  fourstep.c
+  io.c
+  mpalloc.c
+  mpdecimal.c
+  numbertheory.c
+  sixstep.c
+  transpose.c
+PGOMGR : warning PG0188: No .PGC files matching 'C:\cpython\PCbuild\amd64\_decimal!*.pgc' were found.
+    Reading PGD file 1: C:\cpython\PCbuild\amd64\_decimal.pgd
+C:\cpython\PCbuild\amd64\_decimal.pgd : warning C4961: No profile data was merged into 'C:\cpython\PCbuild\amd64\_decimal.pgd', profile-guided optimizations disabled
+     Creating library C:\cpython\PCbuild\amd64\_decimal.lib and object C:\cpython\PCbuild\amd64\_decimal.exp
+  Generating code
+  Finished generating code
+  _decimal.vcxproj -> C:\cpython\PCbuild\amd64\_decimal.pyd
+  _decimal.vcxproj -> C:\cpython\PCbuild\amd64\_decimal.pdb (Full PDB)

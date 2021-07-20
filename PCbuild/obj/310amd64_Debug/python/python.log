@@ -1,5 +1,6 @@
 ﻿  python.c
   python.vcxproj -> C:\cpython\PCbuild\amd64\python_d.exe
+  python.vcxproj -> C:\cpython\PCbuild\amd64\python_d.pdb (Full PDB)
   C:\cpython\lib\site-packages\vext\__init__.py:5: DeprecationWarning: The distutils package is deprecated and slated for removal in Python 3.12. Use setuptools or check PEP 632 for potential alternatives
     from distutils.sysconfig import get_python_lib
   C:\cpython\lib\site-packages\vext\__init__.py:5: DeprecationWarning: The distutils.sysconfig module is deprecated, use sysconfig instead

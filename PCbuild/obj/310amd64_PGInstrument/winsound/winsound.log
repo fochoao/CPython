@@ -4,3 +4,4 @@
   Generating code
   Finished generating code
   winsound.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\winsound.pyd
+  winsound.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\winsound.pdb (Full PDB)

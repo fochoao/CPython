@@ -1,4 +1,3 @@
-﻿  python_uwp.cpp
-  Generating code
-  Finished generating code
-  pythonw_uwp.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\pythonw_uwp.exe
+﻿cl : Command line warning D9002: ignoring unknown option '/std:c++17'
+  python_uwp.cpp
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\cppwinrt\winrt/base.h(12): fatal error C1083: Cannot open include file: 'charconv': No such file or directory

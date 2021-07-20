@@ -3,3 +3,4 @@
   Generating code
   Finished generating code
   _ctypes_test.vcxproj -> C:\cpython\PCbuild\amd64\_ctypes_test.pyd
+  _ctypes_test.vcxproj -> C:\cpython\PCbuild\amd64\_ctypes_test.pdb (Full PDB)

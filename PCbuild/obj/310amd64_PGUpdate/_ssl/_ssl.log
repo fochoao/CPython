@@ -1,1 +1,10 @@
-﻿
+﻿  _ssl.c
+  applink.c
+PGOMGR : warning PG0188: No .PGC files matching 'C:\cpython\PCbuild\amd64\_ssl!*.pgc' were found.
+    Reading PGD file 1: C:\cpython\PCbuild\amd64\_ssl.pgd
+C:\cpython\PCbuild\amd64\_ssl.pgd : warning C4961: No profile data was merged into 'C:\cpython\PCbuild\amd64\_ssl.pgd', profile-guided optimizations disabled
+     Creating library C:\cpython\PCbuild\amd64\_ssl.lib and object C:\cpython\PCbuild\amd64\_ssl.exp
+  Generating code
+  Finished generating code
+  _ssl.vcxproj -> C:\cpython\PCbuild\amd64\_ssl.pyd
+  _ssl.vcxproj -> C:\cpython\PCbuild\amd64\_ssl.pdb (Full PDB)

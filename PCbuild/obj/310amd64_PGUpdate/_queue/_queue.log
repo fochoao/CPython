@@ -1,1 +1,9 @@
-﻿
+﻿  _queuemodule.c
+PGOMGR : warning PG0188: No .PGC files matching 'C:\cpython\PCbuild\amd64\_queue!*.pgc' were found.
+    Reading PGD file 1: C:\cpython\PCbuild\amd64\_queue.pgd
+C:\cpython\PCbuild\amd64\_queue.pgd : warning C4961: No profile data was merged into 'C:\cpython\PCbuild\amd64\_queue.pgd', profile-guided optimizations disabled
+     Creating library C:\cpython\PCbuild\amd64\_queue.lib and object C:\cpython\PCbuild\amd64\_queue.exp
+  Generating code
+  Finished generating code
+  _queue.vcxproj -> C:\cpython\PCbuild\amd64\_queue.pyd
+  _queue.vcxproj -> C:\cpython\PCbuild\amd64\_queue.pdb (Full PDB)

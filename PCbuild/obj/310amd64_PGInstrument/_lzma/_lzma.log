@@ -3,3 +3,4 @@
   Generating code
   Finished generating code
   _lzma.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_lzma.pyd
+  _lzma.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_lzma.pdb (Full PDB)

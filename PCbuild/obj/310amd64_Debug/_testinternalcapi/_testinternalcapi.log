@@ -1,3 +1,4 @@
 ﻿  _testinternalcapi.c
      Creating library C:\cpython\PCbuild\amd64\_testinternalcapi_d.lib and object C:\cpython\PCbuild\amd64\_testinternalcapi_d.exp
   _testinternalcapi.vcxproj -> C:\cpython\PCbuild\amd64\_testinternalcapi_d.pyd
+  _testinternalcapi.vcxproj -> C:\cpython\PCbuild\amd64\_testinternalcapi_d.pdb (Full PDB)

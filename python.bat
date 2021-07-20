@@ -8,4 +8,4 @@
 @setlocal
 @set PYTHONHOME=C:\cpython\
 
-@"C:\cpython\python.exe" %*
+@"C:\cpython\PCbuild\amd64\python.exe" %*

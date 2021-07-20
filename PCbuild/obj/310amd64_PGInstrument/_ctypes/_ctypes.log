@@ -8,3 +8,4 @@
   Generating code
   Finished generating code
   _ctypes.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_ctypes.pyd
+  _ctypes.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_ctypes.pdb (Full PDB)

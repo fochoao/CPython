@@ -3,3 +3,4 @@
   Generating code
   Finished generating code
   _testcapi.vcxproj -> C:\cpython\PCbuild\amd64\_testcapi.pyd
+  _testcapi.vcxproj -> C:\cpython\PCbuild\amd64\_testcapi.pdb (Full PDB)

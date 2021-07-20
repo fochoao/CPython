@@ -1,1 +1,16 @@
-﻿
+﻿  _bz2module.c
+  blocksort.c
+  bzlib.c
+  compress.c
+  crctable.c
+  decompress.c
+  huffman.c
+  randtable.c
+PGOMGR : warning PG0188: No .PGC files matching 'C:\cpython\PCbuild\amd64\_bz2!*.pgc' were found.
+    Reading PGD file 1: C:\cpython\PCbuild\amd64\_bz2.pgd
+C:\cpython\PCbuild\amd64\_bz2.pgd : warning C4961: No profile data was merged into 'C:\cpython\PCbuild\amd64\_bz2.pgd', profile-guided optimizations disabled
+     Creating library C:\cpython\PCbuild\amd64\_bz2.lib and object C:\cpython\PCbuild\amd64\_bz2.exp
+  Generating code
+  Finished generating code
+  _bz2.vcxproj -> C:\cpython\PCbuild\amd64\_bz2.pyd
+  _bz2.vcxproj -> C:\cpython\PCbuild\amd64\_bz2.pdb (Full PDB)

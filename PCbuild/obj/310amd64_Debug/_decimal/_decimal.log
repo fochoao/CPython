@@ -18,3 +18,4 @@
   Generating Code...
      Creating library C:\cpython\PCbuild\amd64\_decimal_d.lib and object C:\cpython\PCbuild\amd64\_decimal_d.exp
   _decimal.vcxproj -> C:\cpython\PCbuild\amd64\_decimal_d.pyd
+  _decimal.vcxproj -> C:\cpython\PCbuild\amd64\_decimal_d.pdb (Full PDB)

@@ -3,3 +3,4 @@
   Generating code
   Finished generating code
   _queue.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_queue.pyd
+  _queue.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_queue.pdb (Full PDB)

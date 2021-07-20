@@ -3,3 +3,4 @@
   Generating code
   Finished generating code
   _asyncio.vcxproj -> C:\cpython\PCbuild\amd64\_asyncio.pyd
+  _asyncio.vcxproj -> C:\cpython\PCbuild\amd64\_asyncio.pdb (Full PDB)

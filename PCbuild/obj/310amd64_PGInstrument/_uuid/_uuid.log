@@ -4,3 +4,4 @@
   Generating code
   Finished generating code
   _uuid.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_uuid.pyd
+  _uuid.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_uuid.pdb (Full PDB)

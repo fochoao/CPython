@@ -3,3 +3,4 @@
   Generating Code...
      Creating library C:\cpython\PCbuild\amd64\_multiprocessing_d.lib and object C:\cpython\PCbuild\amd64\_multiprocessing_d.exp
   _multiprocessing.vcxproj -> C:\cpython\PCbuild\amd64\_multiprocessing_d.pyd
+  _multiprocessing.vcxproj -> C:\cpython\PCbuild\amd64\_multiprocessing_d.pdb (Full PDB)

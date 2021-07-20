@@ -4,3 +4,4 @@
   Generating code
   Finished generating code
   _tkinter.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_tkinter.pyd
+  _tkinter.vcxproj -> C:\cpython\PCbuild\amd64\instrumented\_tkinter.pdb (Full PDB)

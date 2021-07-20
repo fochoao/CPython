@@ -1,1 +1,10 @@
-﻿
+﻿  _tkinter.c
+  tkappinit.c
+PGOMGR : warning PG0188: No .PGC files matching 'C:\cpython\PCbuild\amd64\_tkinter!*.pgc' were found.
+    Reading PGD file 1: C:\cpython\PCbuild\amd64\_tkinter.pgd
+C:\cpython\PCbuild\amd64\_tkinter.pgd : warning C4961: No profile data was merged into 'C:\cpython\PCbuild\amd64\_tkinter.pgd', profile-guided optimizations disabled
+     Creating library C:\cpython\PCbuild\amd64\_tkinter.lib and object C:\cpython\PCbuild\amd64\_tkinter.exp
+  Generating code
+  Finished generating code
+  _tkinter.vcxproj -> C:\cpython\PCbuild\amd64\_tkinter.pyd
+  _tkinter.vcxproj -> C:\cpython\PCbuild\amd64\_tkinter.pdb (Full PDB)

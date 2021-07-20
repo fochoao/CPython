@@ -1,1 +1,17 @@
-﻿
+﻿  cache.c
+  connection.c
+  cursor.c
+  microprotocols.c
+  module.c
+  prepare_protocol.c
+  row.c
+  statement.c
+  util.c
+PGOMGR : warning PG0188: No .PGC files matching 'C:\cpython\PCbuild\amd64\_sqlite3!*.pgc' were found.
+    Reading PGD file 1: C:\cpython\PCbuild\amd64\_sqlite3.pgd
+C:\cpython\PCbuild\amd64\_sqlite3.pgd : warning C4961: No profile data was merged into 'C:\cpython\PCbuild\amd64\_sqlite3.pgd', profile-guided optimizations disabled
+     Creating library C:\cpython\PCbuild\amd64\_sqlite3.lib and object C:\cpython\PCbuild\amd64\_sqlite3.exp
+  Generating code
+  Finished generating code
+  _sqlite3.vcxproj -> C:\cpython\PCbuild\amd64\_sqlite3.pyd
+  _sqlite3.vcxproj -> C:\cpython\PCbuild\amd64\_sqlite3.pdb (Full PDB)

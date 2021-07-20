@@ -1,1 +1,7 @@
-﻿
+﻿  _msi.c
+  _msi.obj : MSIL .netmodule or module compiled with /GL found; restarting link with /LTCG; add /LTCG to the link command line to improve linker performance
+     Creating library C:\cpython\PCbuild\amd64\_msi.lib and object C:\cpython\PCbuild\amd64\_msi.exp
+  Generating code
+  Finished generating code
+  _msi.vcxproj -> C:\cpython\PCbuild\amd64\_msi.pyd
+  _msi.vcxproj -> C:\cpython\PCbuild\amd64\_msi.pdb (Full PDB)
